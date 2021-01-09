@@ -11,18 +11,20 @@
             <div class="hero-slider navigation-thin">
 
                 <!-- Slide -->
-                <div class="slide overlay bg-img-1">
+                @foreach($sliders as $slider)
+                <div class="slide overlay" style="background-image: url({{asset('storage/'.$slider->background_image)}})">
                     <div class="hero-container container">
                         <div class="hero-content">
                             <div class="appear white text-center">
-                                <p class="subheading">We Set You Apart To Grow Online</p>
-                                <h1 class="large mt20 mb20">Bring your <span class="bold">business</span> to life</h1>
-                                <p class="hidden-xs">We create experiences that transform brands, grow businesses and makepeople’s lives<br>better. Awesome interdisciplinary team dedicated to your success!</p>
-                                <a href="#features" class="btn btn-lg btn-primary btn-scroll mt30 mt0-xs">We're Creative</a>
+                                <p class="subheading">{{$slider->small_title}}</p>
+                                <h1 class="large mt20 mb20"><strong>{{$slider->big_title}}</strong></h1>
+                                <p class="hidden-xs">{{$slider->short_description  }}</p>
+                                <a href="#features" class="btn btn-lg btn-primary btn-scroll mt30 mt0-xs">{{$slider->button_text}}</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
                 <!-- End Slide -->
 
                 <!-- Slide -->
@@ -45,19 +47,19 @@
 <!-- End Page Hero -->
 
 <!-- About -->
-<section class="bg-grey">
+<section class="bg-grey" id="about">
             <div class="container pt40 pb40">
                 <div class="vertical-align">
 
                     <div class="col-md-6 text-left pr30 mt40 mb40">
-                        <h2>About Us</h2>
+                        <h2>Qu'est ce que Ruya studio ? </h2>
                         <p>Fusce faucibus tincidunt nulla, tincidunt sagittis magna venenatis quis. Proin commodo eu ipsum eu suscipit. In dapibus arcu sit amet imperdiet. Praesent condimentum nulla at mauris ornare. Praesent condimentum nulla at mauris ornare, eget consequat felis euismod. Praesent condimentum nulla at mauris ornare.</p>
                         <p>Praesent condimentum nulla at mauris ornare, eget consequat felis euismod. Praesent condimentum nulla at mauris ornare. Fusce faucibus tincidunt nulla, tincidunt sagittis magna venenatis quis. Proin commodo eu ipsum eu suscipit.</p>
                     </div>
 
-                    <div class="col-md-6  mt50 mb50">
+                    <div class="col-md-6 mt50 mb50">
                         <div class="video-container">
-                            <iframe src="http://player.vimeo.com/video/115919099?title=0&amp;byline=0&amp;portrait=0&amp;color=fff" allowfullscreen></iframe>
+                            <iframe src="http://player.vimeo.com/video/190203519?title=0&amp;byline=0&amp;portrait=0&amp;color=000222" allowfullscreen></iframe>
                         </div>
                     </div>
 
@@ -157,73 +159,52 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="portfolio-no-gutter-fullwidth cbp" id="js-grid-no-gutter">
+                        @foreach($services as $service)
                         <div class=" cbp-item print branding">
-                               <a href="portfolio-project-carousel.html" class="cbp-caption">
+                               <a href="{{route('service.category',$service->slug)}}" class="cbp-caption" >
                                    <div class="cbp-caption-defaultWrap">
-                                       <img src="img/portfolio/grid/3.jpg" alt="#">
+                                       <img src="{{asset('storage/'.$service->full_image)}}" alt="#">
                                    </div>
-                                   <div class="cbp-caption-activeWrap">
+                                   <div class="cbp-caption-activeWrap d-flex justify-content-center" style="background: linear-gradient(to right, {{$service->color_gradiant_1}}, {{$service->color_gradiant_2}});">
                                        <div class="cbp-l-caption-alignCenter">
                                            <div class="cbp-l-caption-body">
-                                               <div class="cbp-l-caption-title">PlayIt Disk Cover</div>
-                                               <div class="cbp-l-caption-desc">Print, Branding</div>
+                                               <div class="cbp-l-caption-title">
+                                                   <img src="{{asset('img/assets/Ruya-Branding-Logo-white.png')}}" class="img-fluid" alt="logo">
+                                                   {{$service->name}}
+                                               </div>
                                            </div>
                                        </div>
                                    </div>
                                </a>
                            </div>
-                        <div class=" cbp-item print branding">
-                            <a href="portfolio-project-carousel.html" class="cbp-caption">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="img/portfolio/grid/3.jpg" alt="#">
-                                </div>
-                                <div class="cbp-caption-activeWrap">
-                                    <div class="cbp-l-caption-alignCenter">
-                                        <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">PlayIt Disk Cover</div>
-                                            <div class="cbp-l-caption-desc">Print, Branding</div>
+                        @endforeach
+                            @foreach($services as $service)
+                                <div class=" cbp-item print branding">
+                                    <a href="{{route('service.category',$service->slug)}}" class="cbp-caption" >
+                                        <div class="cbp-caption-defaultWrap">
+                                            <img src="{{asset('storage/'.$service->full_image)}}" alt="#">
                                         </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" cbp-item print branding">
-                            <a href="portfolio-project-carousel.html" class="cbp-caption">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="img/portfolio/grid/3.jpg" alt="#">
-                                </div>
-                                <div class="cbp-caption-activeWrap">
-                                    <div class="cbp-l-caption-alignCenter">
-                                        <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">PlayIt Disk Cover</div>
-                                            <div class="cbp-l-caption-desc">Print, Branding</div>
+                                        <div class="cbp-caption-activeWrap d-flex justify-content-center" style="background: linear-gradient(to right, {{$service->color_gradiant_1}}, {{$service->color_gradiant_2}});">
+                                            <div class="cbp-l-caption-alignCenter">
+                                                <div class="cbp-l-caption-body">
+                                                    <div class="cbp-l-caption-title">
+                                                        <img src="{{asset('img/assets/Ruya-Branding-Logo-white.png')}}" class="img-fluid" alt="logo">
+                                                        {{$service->name}}
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class=" cbp-item print branding">
-                            <a href="portfolio-project-carousel.html" class="cbp-caption">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="img/portfolio/grid/3.jpg" alt="#">
-                                </div>
-                                <div class="cbp-caption-activeWrap">
-                                    <div class="cbp-l-caption-alignCenter">
-                                        <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">PlayIt Disk Cover</div>
-                                            <div class="cbp-l-caption-desc">Print, Branding</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                            @endforeach
+
                     </div>
                 </div>
             </div>
         </section>
 <!-- End service -->
 
-<!-- Start Price List -->
+<!-- Start works List -->
 <section class="pt120 pb100">
             <div class="container">
                 <div class="row">
@@ -237,11 +218,11 @@
                         <div class="row">
 
                             <div class="portfolio-gallery-video cbp" id="js-masonry-fullwidth">
-
+                                @foreach($portfolio as $item)
                                 <div class="cbp-item print branding">
                                     <a href="https://www.youtube.com/watch?v=USVg_E7r20g" class="cbp-lightbox cbp-caption">
                                         <div class="cbp-caption-defaultWrap">
-                                            <img src="img/portfolio/gallery/video-1.jpg">
+                                            <img src="{{asset('storage/'.$item->image)}}">
                                         </div>
                                         <div class="cbp-caption-activeWrap">
                                             <div class="cbp-l-caption-alignCenter">
@@ -252,105 +233,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="cbp-item web-design graphic">
-                                    <a href="https://www.youtube.com/watch?v=5XR7naZ_zZA" class="cbp-lightbox cbp-caption">
-                                        <div class="cbp-caption-defaultWrap">
-                                            <img src="img/portfolio/gallery/video-2.jpg">
-                                        </div>
-                                        <div class="cbp-caption-activeWrap">
-                                            <div class="cbp-l-caption-alignCenter">
-                                                <div class="cbp-l-caption-body">
-                                                    <div class="cbp-l-caption-title"><i class="ion-ios-play"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="cbp-item print branding">
-                                    <a href="https://www.youtube.com/watch?v=JxEiIeoet6Q" class="cbp-lightbox cbp-caption">
-                                        <div class="cbp-caption-defaultWrap">
-                                            <img src="img/portfolio/gallery/video-3.jpg">
-                                        </div>
-                                        <div class="cbp-caption-activeWrap">
-                                            <div class="cbp-l-caption-alignCenter">
-                                                <div class="cbp-l-caption-body">
-                                                    <div class="cbp-l-caption-title"><i class="ion-ios-play"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="cbp-item print branding">
-                                    <a href="https://www.youtube.com/watch?v=b0WDY8Y5q-0&list=PLEE58C6029A8A6ADE" class="cbp-lightbox cbp-caption">
-                                        <div class="cbp-caption-defaultWrap">
-                                            <img src="img/portfolio/gallery/video-4.jpg">
-                                        </div>
-                                        <div class="cbp-caption-activeWrap">
-                                            <div class="cbp-l-caption-alignCenter">
-                                                <div class="cbp-l-caption-body">
-                                                    <div class="cbp-l-caption-title"><i class="ion-ios-play"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="cbp-item print graphic">
-                                    <a href="https://vimeo.com/14134912" class="cbp-lightbox cbp-caption">
-                                        <div class="cbp-caption-defaultWrap">
-                                            <img src="img/portfolio/gallery/video-5.jpg">
-                                        </div>
-                                        <div class="cbp-caption-activeWrap">
-                                            <div class="cbp-l-caption-alignCenter">
-                                                <div class="cbp-l-caption-body">
-                                                    <div class="cbp-l-caption-title"><i class="ion-ios-play"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="cbp-item web-design branding">
-                                    <a href="https://www.youtube.com/watch?v=DXuf14ZWsjg" class="cbp-lightbox cbp-caption">
-                                        <div class="cbp-caption-defaultWrap">
-                                            <img src="img/portfolio/gallery/video-6.jpg">
-                                        </div>
-                                        <div class="cbp-caption-activeWrap">
-                                            <div class="cbp-l-caption-alignCenter">
-                                                <div class="cbp-l-caption-body">
-                                                    <div class="cbp-l-caption-title"><i class="ion-ios-play"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="cbp-item web-design graphic">
-                                    <a href="https://www.youtube.com/watch?v=KDxJlW6cxRk" class="cbp-lightbox cbp-caption">
-                                        <div class="cbp-caption-defaultWrap">
-                                            <img src="img/portfolio/gallery/video-7.jpg">
-                                        </div>
-                                        <div class="cbp-caption-activeWrap">
-                                            <div class="cbp-l-caption-alignCenter">
-                                                <div class="cbp-l-caption-body">
-                                                    <div class="cbp-l-caption-title"><i class="ion-ios-play"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="cbp-item print branding">
-                                    <a href="https://www.youtube.com/watch?v=9ZehWVQp-no" class="cbp-lightbox cbp-caption">
-                                        <div class="cbp-caption-defaultWrap">
-                                            <img src="img/portfolio/gallery/video-8.jpg">
-                                        </div>
-                                        <div class="cbp-caption-activeWrap">
-                                            <div class="cbp-l-caption-alignCenter">
-                                                <div class="cbp-l-caption-body">
-                                                    <div class="cbp-l-caption-title"><i class="ion-ios-play"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                @endforeach
 
                             </div>
 
@@ -402,27 +285,25 @@
         </section>
 <!-- End Testimonials -->
 
-<!-- Clients Section -->
+<!-- partners Section -->
         <section class="pt70 pb70 bg-grey">
             <div class="container">
                 <div class="row">
 
                     <div id="clients-slider-2" class="owl-carousel">
-                        <div><img src="img/clients/1.png" class="img-responsive" alt="#"></div>
-                        <div><img src="img/clients/2.png" class="img-responsive" alt="#"></div>
-                        <div><img src="img/clients/3.png" class="img-responsive" alt="#"></div>
-                        <div><img src="img/clients/4.png" class="img-responsive" alt="#"></div>
-                        <div><img src="img/clients/5.png" class="img-responsive" alt="#"></div>
-                        <div><img src="img/clients/6.png" class="img-responsive" alt="#"></div>
-                        <div><img src="img/clients/7.png" class="img-responsive" alt="#"></div>
-                        <div><img src="img/clients/8.png" class="img-responsive" alt="#"></div>
-                        <div><img src="img/clients/9.png" class="img-responsive" alt="#"></div>
+                        @foreach($partners as $partner)
+                        <div>
+                            <a href="{{$partner->link}}" target="_blank">
+                            <img src="{{asset('storage/'.$partner->image)}}" class="img-responsive" alt="#">
+                            </a>
+                        </div>
+                        @endforeach
                     </div>
 
                 </div>
             </div>
         </section>
-<!-- end Clients Section -->
+<!-- end partners Section -->
 @endsection
 </body>
 </html>

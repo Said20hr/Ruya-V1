@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/','pages.index')->name('home');
-Route::view('/about','pages.about-us')->name('about');
+Route::get('/',[App\Http\Controllers\HomeController::class,'index'])->name('home');
+Route::get('/about',[App\Http\Controllers\AboutpageController::class,'index'])->name('about');
 Route::view('/blog','pages.blog')->name('blog');
-Route::view('/category','pages.category')->name('category');
 Route::view('/checkout','pages.checkout')->name('checkout');
 Route::view('/contact','pages.contact')->name('contact');
-Route::view('/service','pages.service')->name('service');
+Route::get('/service',[App\Http\Controllers\ServiceController::class,'index'])->name('service');
+Route::get('/service/{category}',[App\Http\Controllers\ServiceController::class,'show'])->name('service.category');
 Route::view('/cart','pages.shop-cart')->name('cart');
 Route::view('/product','pages.product')->name('product');
 Route::view('/portfolio','pages.clients')->name('portfolio');

@@ -8,7 +8,7 @@
                     <span class="icon-bar middle-bar"></span>
                     <span class="icon-bar bottom-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="img/assets/Logo-white.png" class="logo-light pt10" alt="logo-white" width="85"><img src="img/assets/logo-dark.png" class="logo-dark" alt="#"></a>
+                <a class="navbar-brand" href="#"><img src="{{asset('img/assets/Logo-white.png')}}" class="logo-light pt10" alt="logo-white" width="85"><img src="{{asset('img/assets/logo-dark.png')}}" class="logo-dark" alt="#"></a>
             </div>
         </div>
 
@@ -20,10 +20,10 @@
                     <li class="dropdown">
                         <a href="{{route('service')}}">Services<i class="ti-angle-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{route('category')}}">Categorie 1</a></li>
-                            <li><a href="{{route('category')}}">Categorie 2</a></li>
-                            <li><a href="{{route('category')}}">Categorie 3</a></li>
-                            <li><a href="{{route('category')}}">Categorie 4</a></li>
+                            <li><a href="#">Categorie 1</a></li>
+                            <li><a href="#">Categorie 2</a></li>
+                            <li><a href="#">Categorie 3</a></li>
+                            <li><a href="#">Categorie 4</a></li>
                         </ul>
                     </li>
                     <li><a href="{{route('portfolio')}}">Portfolio</a></li>
@@ -35,9 +35,9 @@
                     <li class="nav-separator"></li>
                     <li>
 
-                        <form  method="POST" action="{{ route('logout') }}">
+                        <form  method="POST" action="{{ route('logout') }}" class="nav-a">
                             @csrf
-                            <a href="{{route('logout')}}" class="nav-a"
+                            <a href="{{route('logout')}}"
                                onclick="event.preventDefault();
                                     this.closest('form').submit();">Se déconnecter</a>
                         </form>

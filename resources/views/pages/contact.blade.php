@@ -25,40 +25,40 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="contact col-md-9">
+                    <div class="contact col-md-8">
                         <div id="message"></div>
                         <!-- Contact Form will be functional only on your server. Upload to your server when testing. -->
                         <form method="post" action="php/contact-form.php" name="contactform" id="contactform">
-                            <fieldset><input name="name" type="text" id="name" placeholder="Your Name*"/></fieldset>
-                            <fieldset><input name="email" type="text" id="email" placeholder="Your Email*"/></fieldset>
-                            <input name="subject" type="text" id="subject" placeholder="Subject"/>
+                            <fieldset><input name="name" type="text" id="name" placeholder="Votre Nom*"/></fieldset>
+                            <fieldset><input name="email" type="text" id="email" placeholder="Votre Email*"/></fieldset>
+                            <input name="subject" type="text" id="subject" placeholder="Sujet"/>
                             <textarea name="comments" cols="40" rows="3" id="comments" placeholder="Description*"></textarea>
-                            <input type="submit" class="submit btn btn-md btn-primary" id="submit" value="Send Message" />
+                            <input type="submit" class="submit btn btn-md btn-primary" id="submit" value="Envoyer Le Message" />
                         </form>
                     </div>
 
-                    <div class="col-md-3 contact-side">
+                    <div class="col-md-4 contact-side">
                         <div class="side-info">
-                            <h5>We’d love to talk to you!</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis porttitor turpis, at convallis eros ultricie.</p>
-                        </div>
-                        <div class="side-info">
-                            <h5>Reach out today!</h5>
-                            <p>
-                                124 Central West, Manhattan, NY
-                                <br>
-                                (001) 965 4688
-                                <br>
-                                <a href="#">hello@vossendesign.com</a>
-                            </p>
+                            <h4 class="pb20 ">Contactez-nous maintenant! </h4>
+                           <div class="pb5">
+                               <h5><i class="icon ion-android-pin pr10" aria-hidden="true"></i> 09015, Cité AADL Blida Ouled Yaich , Algerié</h5>
+                           </div>
+                            <div class="pb5 pt5">
+                                <h5 class="pb5"><i class="icon ion-ios-telephone pr10" aria-hi aridden="true"></i> (+213) 06 56 48 95 87</h5>
+                                <h5 class="pb5"><i class="icon ion-ios-telephone pr10" aria-hi aridden="true"></i> (+213) 025 26 58 84</h5>
+                            </div>
+                            <div class="pb5 pt5">
+                                <h5 class="pb5"><i class="icon ion-ios-email pr10"a-hidden="true"></i>  contact@ruya.studio</h5>
+                                <h5 class="pb5"><i class="icon ion-ios-email pr10"a-hidden="true"></i>  motion@ruya.studio</h5>
+                            </div>
+
                         </div>
                         <div class="sidebar-share">
                             <ul class="list-inline">
-                                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                <li><a href="#"><i class="ti-linkedin"></i></a></li>
-                                <li><a href="#"><i class="ti-pinterest-alt"></i></a></li>
-                                <li><a href="#"><i class="ti-google"></i></a></li>
+                                <li><a href="https://www.facebook.com/studio.ruya" target="_blank"><i class="ti-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/studio.ruya/" target="_blank"><i class="ti-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/69400627/" target="_blank"><i class="ti-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCqas7VAnMlkzHz6CMmCtfJg?pbjreload=102" target="_blank"><i class="ti-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -70,9 +70,9 @@
 
         <!-- Google Map -->
         <section
-             data-map-coordinates="40.776773, -73.981351"
-             data-marker-coordinates="40.775075, -73.981179"
-             data-info="Come visit us today!<br>4th West St, New York"
+             data-map-coordinates="36.503889,  2.867083"
+             data-marker-coordinates="36.503889,  2.867083"
+             data-info="AADL, Ouled Yaich, Blida"
              id="map" class="map-style-1 height500">
         </section>
         <!-- End Google Map -->

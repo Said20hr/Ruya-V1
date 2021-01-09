@@ -21,20 +21,21 @@
         </div>
     </section>
 
+    @foreach($abouts as $about)
     <!-- About -->
     <section class="bg-grey-1">
         <div class="container pt80 pb40">
             <div class="vertical-align">
 
                 <div class="col-md-6 text-left pr30 mt40 mb40">
-                    <h2>Notre histoire</h2>
-                    <p>Fusce faucibus tincidunt nulla, tincidunt sagittis magna venenatis quis. Proin commodo eu ipsum eu suscipit. In dapibus arcu sit amet imperdiet. Praesent condimentum nulla at mauris ornare. Praesent condimentum nulla at mauris ornare, eget consequat felis euismod. Praesent condimentum nulla at mauris ornare.</p>
-                    <p>Praesent condimentum nulla at mauris ornare, eget consequat felis euismod. Praesent condimentum nulla at mauris ornare. Fusce faucibus tincidunt nulla, tincidunt sagittis magna venenatis quis. Proin commodo eu ipsum eu suscipit.</p>
+                    <h2>{{$about->title_1}}</h2>
+                    <p>{!! $about->description_1 !!}</p>
                 </div>
 
                 <div class="col-md-6 mt50 mb50">
                     <div class="video-container">
-                        <iframe src="http://player.vimeo.com/video/115919099?title=0&amp;byline=0&amp;portrait=0&amp;color=fff" allowfullscreen></iframe>
+                 <iframe src="http://player.vimeo.com/video/{{$about->link_video}}?title=0&amp;byline=0&amp;portrait=0&amp;color=fff" allowfullscreen></iframe>
+{{--                        <iframe src='{{$about->link_video}}' frameborder='0' allowfullscreen></iframe>--}}
                     </div>
                 </div>
 
@@ -52,15 +53,14 @@
                       <div class="row">
                           <div class="col-lg-6">
                                   <div class="slider-block-1 owl-carousel navigation-thin ">
-                                      <img src="img/portfolio/grid/4.jpg" class="img-responsive mr-auto">
-                                      <img src="img/portfolio/grid/4.jpg" class="img-responsive mr-auto">
-                                      <img src="img/portfolio/grid/4.jpg" class="img-responsive mr-auto">
+                                       @foreach((array)json_decode($about->images,true) as $image)
+                                      <img src="{{asset('storage/'.$image)}}" class="img-responsive mr-auto">
+                                      @endforeach
                                   </div>
                           </div>
                           <div class="col-md-6 text-left pr30 mt40 mb40">
-                              <h2>Notre mission</h2>
-                              <p>Fusce faucibus tincidunt nulla, tincidunt sagittis magna venenatis quis. Proin commodo eu ipsum eu suscipit. In dapibus arcu sit amet imperdiet. Praesent condimentum nulla at mauris ornare. Praesent condimentum nulla at mauris ornare, eget consequat felis euismod. Praesent condimentum nulla at mauris ornare.</p>
-                              <p>Praesent condimentum nulla at mauris ornare, eget consequat felis euismod. Praesent condimentum nulla at mauris ornare. Fusce faucibus tincidunt nulla, tincidunt sagittis magna venenatis quis. Proin commodo eu ipsum eu suscipit.</p>
+                              <h2>{{$about->title_2}}</h2>
+                              <p>{!! $about->description_2 !!}</p>
                           </div>
                       </div>
                   </div>
@@ -68,7 +68,7 @@
           </div>
       </section>
       <!-- End Skills -->
-
+    @endforeach
 
 
 
@@ -82,10 +82,11 @@
                   </div>
                   <div class="container">
                   <div class="row event-speakers">
+                      @foreach($team as $member)
                       <div class="col-lg-4 team">
                           <div class="team-container">
                               <div class="team-image">
-                                  <img src="img/team/1.jpg" class="img-responsive" alt="" />
+                                  <img src="{{asset('storage/'.$member->Image)}}" class="img-responsive" alt="" />
                               </div>
                               <div class="team-caption">
                                   <div>
@@ -99,115 +100,11 @@
                                   </div>
                               </div>
                           </div>
-                          <h4>John Westbrook</h4>
-                          <p>Senior Web Developer</p>
+                          <h4>{{$member->first_name." ".$member->last_name}}</h4>
+                          <p>{{$member->job_title}}</p>
                       </div>
-                      <div class="col-lg-4 team">
-                          <div class="team-container">
-                              <div class="team-image">
-                                  <img src="img/team/2.jpg" class="img-responsive" alt="" />
-                              </div>
-                              <div class="team-caption">
-                                  <div>
-                                      <div>
-                                          <ul>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-youtube"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                                          </ul>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <h4>Kelly Swanson</h4>
-                          <p>Marketing Manager</p>
-                      </div>
-                      <div class="col-lg-4 team">
-                          <div class="team-container">
-                              <div class="team-image">
-                                  <img src="img/team/3.jpg" class="img-responsive" alt="" />
-                              </div>
-                              <div class="team-caption">
-                                  <div>
-                                      <div>
-                                          <ul>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-youtube"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-dribbble"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                                          </ul>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <h4>Chris Holland</h4>
-                          <p>Motion Graphics</p>
-                      </div>
-                      <div class="col-lg-4 team">
-                          <div class="team-container">
-                              <div class="team-image">
-                                  <img src="img/team/1.jpg" class="img-responsive" alt="" />
-                              </div>
-                              <div class="team-caption">
-                                  <div>
-                                      <div>
-                                          <ul>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-youtube"></i></a></li>
-                                          </ul>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <h4>John Westbrook</h4>
-                          <p>Senior Web Developer</p>
-                      </div>
-                      <div class="col-lg-4 team">
-                          <div class="team-container">
-                              <div class="team-image">
-                                  <img src="img/team/2.jpg" class="img-responsive" alt="" />
-                              </div>
-                              <div class="team-caption">
-                                  <div>
-                                      <div>
-                                          <ul>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-youtube"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                                          </ul>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <h4>Kelly Swanson</h4>
-                          <p>Marketing Manager</p>
-                      </div>
-                      <div class="col-lg-4 team">
-                          <div class="team-container">
-                              <div class="team-image">
-                                  <img src="img/team/3.jpg" class="img-responsive" alt="" />
-                              </div>
-                              <div class="team-caption">
-                                  <div>
-                                      <div>
-                                          <ul>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-youtube"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-dribbble"></i></a></li>
-                                              <li class="social-icon"><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                                          </ul>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <h4>Chris Holland</h4>
-                          <p>Motion Graphics</p>
-                      </div>
+                      @endforeach
+
                   </div>
                   </div>
 

@@ -592,6 +592,7 @@ nav a {cursor: pointer}
 		line-height: 2;
 		display: table-cell !important;
 		vertical-align: middle;
+
 	}
 	.navbar-brand img,
 	.nav-small .navbar-brand img {
@@ -604,10 +605,11 @@ nav a {cursor: pointer}
 	.nav>li>a ,.nav-a{
 		display: inline-block;
 		font-family: 'lovelo',sans-serif;
-		font-size: 12.4px;
+		font-size: 12px;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		padding-bottom: 8px;
+
 	}
 	.navbar-brand {
 		height: auto;
@@ -831,8 +833,10 @@ nav.navbar.nav-grey {
 }
 
 /* Menu Items */
-.navbar-nav>li>a ,.nav-a , nav-a{
+.navbar-nav>li>a ,.nav-a  {
 	padding: 16px 11px 14px 11px;
+    height: 100%;
+    margin: 0;
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
 	background-color: transparent;
@@ -856,7 +860,7 @@ nav.navbar.nav-grey {
 	min-width: 200px;
 	padding: 0;
 	margin: 0;
-	font-size: 12.5px;
+	font-size: 12px;
 	line-height: 13px;
 	background-color: #181818;
 	border: none;
@@ -1132,7 +1136,7 @@ nav.navbar.nav-grey {
 		margin-left: 0;
 	}
 	/* Collapsed Header Dropdowns */
-	.navbar-default .navbar-nav>li>a,.nav-a,
+	.navbar-default .navbar-nav>li>a,.nav-a ,
 	 .navbar-default .navbar-nav>li>a:focus {
 		 color: #b2b2b2;
 		 padding: 16px 13px 14px 13px;
@@ -1372,13 +1376,15 @@ nav.navbar.nav-grey {
 		-ms-transition: background-color 0.3s;
 		transition: background-color 0.3s;
 	}
-	.navbar-default.transparent .navbar-nav>li>a ,.nav-a , nav-a{
+	.navbar-default.transparent .navbar-nav>li>a ,.navbar-default.transparent .navbar-nav>li .nav-a a{
 		color: #fff;
 		font-size: 12px;
 		font-weight: 400;
 		letter-spacing: 1px;
+
+
 	}
-	.navbar-default.transparent.nav-small .navbar-nav>li>a ,.nav-a , nav-a{
+	.navbar-default.transparent.nav-small .navbar-nav>li>a ,.navbar-default.transparent.nav-small .navbar-nav>li>.nav-a a {
 		color: #191a1c;
 		font-size: 12px;
 		font-weight: normal;
@@ -1387,9 +1393,9 @@ nav.navbar.nav-grey {
 	.navbar-default.transparent.nav-small .navbar-nav>li>a:hover {
 		color: #191a1c;
 	}
-	.navbar-default.transparent .navbar-nav>li>a:hover {
-		color: #fff;
-		opacity: .8;
+	.navbar-default.transparent .navbar-nav>li>a:hover , .nav-a a:hover{
+		color: #e7e5e5;
+		opacity: .7;
 	}
 	.navbar-default.transparent .header-divider span {
 		border-right: 1px solid rgba(255,255,255,0.1);
@@ -1419,7 +1425,7 @@ nav.navbar.nav-grey {
 		background-color: #111;
 		box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
 	}
-	.navbar-default.dark .navbar-nav>li>a ,.nav-a , nav-a{
+	.navbar-default.dark .navbar-nav>li>a ,.nav-a a{
 		color: #eee;
 		font-size: 11px;
 		font-weight: 400;
@@ -2133,8 +2139,8 @@ fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, f
 	color: #fff;
 }
 .panel-title.collapsed {
-	background-color: rgba(0,0,0,0.045);
-	color: #666;
+	background-color: #0cb4ce;
+	color: #FFFFFF;
 }
 .panel-title,
 .panel-title.collapsed,
@@ -3256,11 +3262,11 @@ ul {
 }
 .price-box h2 {
 	font-family: "lovelo", sans-serif;
-	padding-left: 35px;
+	padding-left: 20px;
 }
 .price-box h2 sup {
-	font-size: 32px;
-	top: -.6em
+	font-size: 28px;
+	top: -1em
 }
 .price-box h2 span span {
 	font-size: 16px;
@@ -3906,11 +3912,17 @@ ul {
 .cbp-l-grid-mosaic .cbp-caption-activeWrap {
 	background-color: rgba(0,0,0,0.95);
 }
-.cbp-l-grid-mosaic .cbp-l-caption-title {
-	font: normal 18px/22px "lovelo", sans-serif;
+.cbp-l-grid-mosaic .cbp-l-caption-title ,.cbp-l-caption-title{
+	font: normal 18px "lovelo", sans-serif;
 	color: #fff;
 	text-transform: none;
 	margin-bottom: 0
+}
+.cbp-l-caption-title img
+{
+    width: 50px;
+    justify-content: center;
+    margin: 10px auto;
 }
 .cbp-l-grid-mosaic .cbp-l-caption-desc {
 	color: #f9f9f9;
@@ -4946,7 +4958,7 @@ blockquote {
 	z-index: 3;
 }
 .shop .cbp-l-caption-body a i {
-	font-size: 15px;
+	font-size: 20px;
 	margin-right: 5px;
 	margin-left: 0;
 }

@@ -36,17 +36,17 @@
                 <div class="col-md-3 pt20">
                     <div class="subheading">Contactez-nous</div>
                     <ul class="footer-contact pt30">
-                        <li><i class="icon ion-android-pin pr10" aria-hidden="true"></i> 09058, ADL Ouled Yaich Blida</li>
-                        <li><i class="icon ion-ios-telephone pr10" aria-hidden="true"></i> 0252225236</li>
-                        <li><i class="icon ion-ios-telephone pr10" aria-hi aridden="true"></i> 0252225236</li>
-                        <li><i class="icon ion-ios-email pr10" aria-hidden="true"></i> Ruya_09@gmail.com</li>
-                        <li><i class="icon ion-ios-email pr10"a-hidden="true"></i> Ruya_09@gmail.com</li>
+                        <li><i class="icon ion-android-pin pr10" aria-hidden="true"></i> 09015, Cité AADL Blida Ouled Yaich</li>
+                        <li><i class="icon ion-ios-telephone pr10" aria-hidden="true"></i> (+213) 06 56 48 95 87</li>
+                        <li><i class="icon ion-ios-telephone pr10" aria-hi aridden="true"></i> (+213) 025 26 58 84</li>
+                        <li><i class="icon ion-ios-email pr10" aria-hidden="true"></i> contact@ruya.studio</li>
+                        <li><i class="icon ion-ios-email pr10"a-hidden="true"></i> motion@ruya.studio</li>
                         <li>
                             <ul class="social-icons pl20 pt10">
-                                <li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
-                                <li><a href="#"><i class="icon ion-social-instagram"></i></a></li>
-                                <li><a href="#"><i class="icon ion-social-linkedin"></i></a></li>
-                                <li><a href="#"><i class="icon ion-social-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/studio.ruya" target="_blank"><i class="icon ion-social-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/studio.ruya/" target="_blank"><i class="icon ion-social-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/69400627/" target="_blank"><i class="icon ion-social-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCqas7VAnMlkzHz6CMmCtfJg?pbjreload=102" target="_blank"><i class="icon ion-social-youtube"></i></a></li>
                             </ul>
                         </li>
                     </ul>
