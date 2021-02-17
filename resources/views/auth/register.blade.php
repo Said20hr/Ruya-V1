@@ -75,6 +75,20 @@
                                     {{ __('Register') }}
                                 </button>
                             </div>
+                            <div class="col-md-8 offset-md-4">
+                                <a href="{{ route('login.facebook') }}">
+                                    <button type="button" class="btn btn-block btn-facebook">
+                                        <i class="fa fa-facebook mr-2"></i>Register with Facebook
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="col-md-8 offset-md-4">
+                                <a href="{{ route('login.google') }}">
+                                    <button type="button" class="btn btn-block btn-google">
+                                        <i class="fa fa-google mr-2"></i>Register with Google
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </form>
                 </div>
