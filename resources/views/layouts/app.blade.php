@@ -11,7 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Ruya studio - @yield('title')</title>
-
+    <link rel="icon" href="{{ URL::asset('Ruya-Branding-Logo.png') }}" type="image/x-icon"/>
     <!-- Styles -->
     <link href="{{ URL::asset('css/ionicons.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{ URL::asset('css/et-line-icons.css')}}" rel="stylesheet" type="text/css">

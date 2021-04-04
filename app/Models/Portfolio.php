@@ -5,11 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class Portfolio extends Model
 {
     use HasFactory;
-    public function portfolio()
+
+
+    public function services()
     {
-        $this->hasMany('App\Models\Portfolio');
+        return $this->belongsToMany('App\Models\service');
     }
 }

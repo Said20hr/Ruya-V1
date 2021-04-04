@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('content')
     <section class="pt40 pb40  parallax  overlay bg-img-1">

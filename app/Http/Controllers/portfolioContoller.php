@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Portfolio;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
-class ServiceController extends Controller
+class portfolioContoller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +15,14 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $serices = Service::all();
-        return view('pages.service')
-            ->with('services',$serices);
+        $services =Service::all();
+        $portoflios=Portfolio::all();
+
+        return view('pages.clients')
+            ->with([
+                'services'=>$services,
+                'portoflios'=>$portoflios,
+                ]);
     }
 
     /**
@@ -46,22 +52,9 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
         //
-
-
-       if(request()->category) {
-            $service= Service::where('slug','=',$slug)->firstOrfail();
-            $services= Service::all();
-
-            return view('pages.category')->with([
-                'service'=>$service,
-                'services'=>$services,
-            ]);
-
-
-        }
     }
 
     /**

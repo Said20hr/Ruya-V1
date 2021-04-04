@@ -453,13 +453,13 @@
 		sortToPreventGaps: true,
 		mediaQueries: [{
 			width: 1500,
-			cols: 4
+			cols: 3
 		}, {
 			width: 1100,
-			cols: 4
+			cols: 3
 		}, {
 			width: 800,
-			cols: 4
+			cols: 3
 		}, {
 			width: 480,
 			cols: 2
@@ -488,10 +488,10 @@
 		sortToPreventGaps: true,
 		mediaQueries: [{
 			width: 1500,
-			cols: 4
+			cols: 3
 		}, {
 			width: 1100,
-			cols: 4
+			cols: 3
 		}, {
 			width: 800,
 			cols: 3
@@ -504,8 +504,8 @@
 		}],
 		defaultFilter: '*',
 		animationType: 'sequentially',
-		gapHorizontal: 15,
-		gapVertical: 15,
+		gapHorizontal: 50,
+		gapVertical: 50,
 		caption: 'zoom',
 		displayType: 'sequentially',
 		displayTypeSpeed: 100

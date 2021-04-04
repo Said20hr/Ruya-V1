@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
-class ServiceController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +18,10 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $serices = Service::all();
-        return view('pages.service')
-            ->with('services',$serices);
+        $services =Service::all();
+        return view('pages.contact')->with([
+            'services'=>$services
+        ]);
     }
 
     /**
@@ -37,7 +42,25 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+            $validation=Validator::make($request->all(), [
+            'name' => 'required|string|min:3',
+            'email' => 'required|email',
+            'subject' => 'required||string|min:3',
+            'comments' => 'required|string|min:15'
+        ]);
+        if($validation->fails()){
+            return Redirect::back()->withErrors($validation)->withInput();
+        }else {
+            Contact::create([
+                'name' => filter_var(strip_tags(htmlentities($request->name)), FILTER_SANITIZE_STRING),
+                'email' => filter_var(strip_tags(htmlentities($request->email)), FILTER_SANITIZE_STRING),
+                'subject' => filter_var(strip_tags(htmlentities($request->subject)), FILTER_SANITIZE_STRING),
+                'description' => filter_var(strip_tags(htmlentities($request->comments)), FILTER_SANITIZE_STRING),
+            ]);
+            return back()->with('success_message', 'Merci, Nous avons reçu votre message et nous prendrons contact avec vous sous peu.');
+        }
     }
 
     /**
@@ -46,22 +69,9 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
         //
-
-
-       if(request()->category) {
-            $service= Service::where('slug','=',$slug)->firstOrfail();
-            $services= Service::all();
-
-            return view('pages.category')->with([
-                'service'=>$service,
-                'services'=>$services,
-            ]);
-
-
-        }
     }
 
     /**

@@ -3,17 +3,18 @@
 <html>
 <head>
     @section('title', 'portfolio')
+    <link rel="icon" href="{{ URL::asset('eye-only.svg') }}" type="image/x-icon"/>
 </head>
 <body>
 @section('content')
 
-    <section class="hero-fullwidth parallax  overlay bg-img-1">
+    <section class="hero-fullwidth  overlay bg-img-1" style="background-image: url({{asset('img/backgrounds/02.png')}});background-size: 100%;">
     <div class="hero-container container">
         <div class="hero-content text-center">
 
-            <div class="col-sm-12 mr-auto text-center pt20">
+            <div class="col-sm-12 mr-auto text-center">
                 <h1 class="large white-until-load mt20 white"><span class="bold">Portfolio</span></h1>
-                <h5 class="subheading white-until-load mt20 mb30 hidden-xs white">Ruya studio agence reactive</h5>
+                <h5 class="subheading white-until-load mt20 mb30 hidden-xs white">Ruya studio agence Creative</h5>
                 <hr class="separator">
             </div>
         </div>
@@ -21,165 +22,48 @@
 </section>
     <!-- Portfolio -->
     <section class="portfolio bg-grey-2">
-    <div class="container pt40 pb100">
+    <div class="container pb20">
         <div class="row">
             <div class="portfolio-filters-center cbp-l-filters-button" id="js-filters">
                 <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
-                    All
+                    Tous
                 </div>
-                <div data-filter=".branding" class="cbp-filter-item">
-                    Branding
+                @foreach($services as $service)
+                <div data-filter=".{{$service->slug}}" class="cbp-filter-item">
+                   {{$service->name}}
                 </div>
-                <div data-filter=".web-design" class="cbp-filter-item">
-                    Web Design
-                </div>
-                <div data-filter=".print" class="cbp-filter-item">
-                    Print
-                </div>
-                <div data-filter=".graphic" class="cbp-filter-item">
-                    Graphic
-                </div>
+                @endforeach
+
             </div>
 
             <div class="portfolio-grid-fullwidth cbp" id="js-grid">
-
-                <div class="cbp-item print branding">
-                    <a href="portfolio-project-carousel.html" class="cbp-caption">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="img/portfolio/grid/1.jpg">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Rewind Watch App</div>
-                                    <div class="cbp-l-caption-desc">Branding, Graphic</div>
+               @foreach($portoflios as $portfolio)
+                    @foreach($portfolio->services as $service)
+                        @if(empty($portfolio))
+                            NO Portfolio added for now...
+                        @else
+                        <div class="cbp-item print {{$service->slug}}" >
+                            @if(!empty($portfolio->video_link))
+                                <a href="{{$portfolio->video_link}}" class="cbp-lightbox cbp-caption">
+                                    @else
+                                        <a href="{{asset('storage/'.$portfolio->image)}}" class="cbp-lightbox cbp-caption">
+                                            @endif
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="{{asset('storage/'.$portfolio->image)}}">
                                 </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cbp-item web-design graphic">
-                    <a href="portfolio-project-carousel.html" class="cbp-caption">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="img/portfolio/grid/2.jpg">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Experience Pad UI</div>
-                                    <div class="cbp-l-caption-desc">Web-design, Graphic</div>
+                                <div class="cbp-caption-activeWrap" style="background: linear-gradient(to right, {{$service->color_gradiant_1}}, {{$service->color_gradiant_2}});">
+                                    <div class="cbp-l-caption-alignCenter">
+                                        <div class="cbp-l-caption-body">
+                                            <div class="cbp-l-caption-title">{{$portfolio->title}}</div>
+                                            <div class="cbp-l-caption-desc">{{$service->name}}</div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="cbp-item print branding">
-                    <a href="portfolio-project-carousel.html" class="cbp-caption">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="img/portfolio/grid/3.jpg">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">PlayIt Disk Cover</div>
-                                    <div class="cbp-l-caption-desc">Print, Branding</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cbp-item print branding">
-                    <a href="portfolio-project-carousel.html" class="cbp-caption">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="img/portfolio/grid/4.jpg">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Sketching Fun</div>
-                                    <div class="cbp-l-caption-desc">Print, Branding</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cbp-item print graphic">
-                    <a href="portfolio-project-carousel.html" class="cbp-caption">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="img/portfolio/grid/5.jpg">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Fabric Bag</div>
-                                    <div class="cbp-l-caption-desc">Print, Graphic</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cbp-item web-design branding">
-                    <a href="portfolio-project-carousel.html" class="cbp-caption">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="img/portfolio/grid/6.jpg">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Wander Interface</div>
-                                    <div class="cbp-l-caption-desc">Web Design, Graphic</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="cbp-item web-design graphic">
-                    <a href="portfolio-project-carousel.html" class="cbp-caption">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="img/portfolio/grid/7.jpg">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Floating Apps</div>
-                                    <div class="cbp-l-caption-desc">Web Design, Graphic</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cbp-item print branding">
-                    <a href="portfolio-project-carousel.html" class="cbp-caption">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="img/portfolio/grid/8.jpg">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Deer Wildfile</div>
-                                    <div class="cbp-l-caption-desc">Print, Branding</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cbp-item web-design graphic">
-                    <a href="portfolio-project-carousel.html" class="cbp-caption">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="img/portfolio/grid/9.jpg">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">WhereTo App</div>
-                                    <div class="cbp-l-caption-desc">Web Design, Graphic</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
+                        @endif
+                    @endforeach
+                @endforeach
             </div>
 
         </div>

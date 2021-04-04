@@ -2,18 +2,19 @@
     <!DOCTYPE html>
 <html>
 <head>
-    @section('title', 'portfolio')
+    @section('title', 'contact')
+    <link rel="icon" href="{{ URL::asset('eye-only.svg') }}" type="image/x-icon"/>
 </head>
 <body>
 @section('content')
         <!-- Page Hero -->
-        <section class="page-title parallax overlay bg-img-1">
-            <div class="page-title-content">
-                <div class="container">
+        <section class="hero-fullwidth parallax overlay" style="background-image: url({{asset('img/backgrounds/2480558.jpg')}});">
+            <div class="hero-container container">
+                <div class="hero-content text-center">
                     <div class="col-sm-12 text-center white">
-                        <h1>Let' Get in Touch</h1>
+                        <h1 class="bold">Restons en contact</h1>
                         <hr class="separator">
-                        <h5 class="subheading">Try for free - Start paying when you’re ready.</h5>
+                        <h5 class="subheading">Nous vous remercions de votre intérêt et prendrons rapidement contact avec vous.</h5>
                     </div>
                 </div>
             </div>
@@ -23,12 +24,25 @@
         <!-- Start Contact Form Section -->
         <section class="pt100 pb90">
             <div class="container">
-                <div class="row">
+                @if(count($errors) >0 )
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 
+            @if(session()->has('success_message'))
+                        <div class="alert alert-success">{{session()->get('success_message')}}</div>
+                    @endif
+                <div class="row">
                     <div class="contact col-md-8">
                         <div id="message"></div>
                         <!-- Contact Form will be functional only on your server. Upload to your server when testing. -->
-                        <form method="post" action="php/contact-form.php" name="contactform" id="contactform">
+                        <form method="post" action="{{route('contact.form')}}">
+                            @csrf
                             <fieldset><input name="name" type="text" id="name" placeholder="Votre Nom*"/></fieldset>
                             <fieldset><input name="email" type="text" id="email" placeholder="Votre Email*"/></fieldset>
                             <input name="subject" type="text" id="subject" placeholder="Sujet"/>
@@ -69,12 +83,9 @@
         <!-- End Contact Form Section -->
 
         <!-- Google Map -->
-        <section
-             data-map-coordinates="36.503889,  2.867083"
-             data-marker-coordinates="36.503889,  2.867083"
-             data-info="AADL, Ouled Yaich, Blida"
-             id="map" class="map-style-1 height500">
-        </section>
+        <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=AADL,%20Ouled%20Yaich,%20Blida+(Ruya%20Studio)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+
+            </iframe></div>
         <!-- End Google Map -->
 
 @endsection

@@ -1,3 +1,36 @@
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <!-- SEO  -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta description="">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>Ruya studio - @yield('title')</title>
+    <link rel="icon" href="{{ URL::asset('Ruya-Branding-Logo.png') }}" type="image/x-icon"/>
+    <!-- Styles -->
+    <link href="{{ URL::asset('css/ionicons.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ URL::asset('css/et-line-icons.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ URL::asset('css/themify-icons.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ URL::asset('fonts/lovelo/stylesheet.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/font-awesome.min.css')}}"  rel="stylesheet">
+    <link href="{{asset('img/assets/favicon.png')}}" rel="icon" type="image/png">
+    <link href="{{asset('css/plugins.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/theme.css')}}" rel="stylesheet" type="text/css">
+
+    <link href="{{asset('css/custom.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/colors/blue.css')}}" id="color-scheme" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body>
+
 <nav class="navbar navbar-default fullwidth transparent">
     <div class="container">
         <div class="navbar-header">
@@ -19,36 +52,30 @@
                     <li><a href="{{route('about')}}">A propos</a></li>
                     <li class="dropdown">
                         <a href="{{route('service')}}">Services<i class="ti-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            @foreach($services as $service)
-                            <li><a href="{{route('service.category',$service->slug)}}">{{$service->name}}</a></li>
-                            @endforeach
-                        </ul>
                     </li>
                     <li><a href="{{route('portfolio')}}">Portfolio</a></li>
                     {{--<li><a href="{{route('blog')}}">Blog</a></li>--}}
                     <li><a href="{{route('contact')}}">Contact</a></li>
                     <li class="nav-separator"></li>
                     @if(Auth::user())
-                    <li><a href="#">{{auth()->user()->name}}</a></li>
-                    <li class="nav-separator"></li>
-                    <li>
+                        <li><a href="#">{{auth()->user()->name}}</a></li>
+                        <li class="nav-separator"></li>
+                        <li>
 
-                        <form  method="POST" action="{{ route('logout') }}" class="nav-a">
-                            @csrf
-                            <a href="{{route('logout')}}"
-                               onclick="event.preventDefault();
+                            <form  method="POST" action="{{ route('logout') }}" class="nav-a">
+                                @csrf
+                                <a href="{{route('logout')}}"
+                                   onclick="event.preventDefault();
                                     this.closest('form').submit();">Se déconnecter</a>
-                        </form>
-                    </li>
-                    <li class="nav-separator"></li>
+                            </form>
+                        </li>
+                        <li class="nav-separator"></li>
                     @else
                         <li><a href="{{route('login')}}">Se connecter</a></li>
                         <li class="nav-separator"></li>
                         <li><a href="{{route('register')}}">S'inscrire</a></li>
                         <li class="nav-separator"></li>
                     @endif
-                    {{--
                     <li class="nav-icon"><a class="popup-with-zoom-anim search" href="#search-modal"><i class="flaticon-search"></i> <span class="hidden-md">Recherche</span></a></li>
                     <li id="search-modal" class="zoom-anim-dialog mfp-hide"><form><input type="text" id="search-modal-input" placeholder=" Start typing to search..." autocomplete="off"></form></li>
                     <li class="nav-icon dropdown nav-shop-cart">
@@ -79,9 +106,21 @@
                             </li>
                         </ul>
                     </li>
-                    --}}
                 </ul>
             </div>
         </div>
     </div>
 </nav>
+
+@yield('content')
+<footer>
+    @include('includes.footer')
+</footer>
+<a id="back-to-top"><i class="icon ion-chevron-up"></i></a>
+<!-- Scripts -->
+<script src="{{asset('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')}}"></script>
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/plugins.js')}}"></script>
+<script src="{{asset('js/scripts.js')}}"></script>
+</body>
+</html>

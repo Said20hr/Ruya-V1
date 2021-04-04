@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Partners;
-use App\Models\portfolio;
+use App\Models\Portfolio;
 use App\Models\Service;
 use App\Models\Slider;
 use Gloudemans\Shoppingcart\Facades;
@@ -40,7 +40,7 @@ class HomeController extends Controller
         $services=Service::all();
         $sliders=Slider::all();
         $partners=Partners::all();
-        $portfolio=portfolio::where('featured',true)->take(8)->get();
+        $portfolio=Portfolio::where('featured',true)->take(8)->get();
         return view('pages.index')->with([
             'cart'=>$cart,
             'subtotal'=>$carttotal,

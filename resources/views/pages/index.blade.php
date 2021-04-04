@@ -3,6 +3,7 @@
 <html>
 <head>
     @section('title', 'Accueil')
+    <link rel="icon" href="{{ URL::asset('eye-only.svg') }}" type="image/x-icon"/>
 </head>
 <body>
 @section('content')
@@ -27,7 +28,7 @@
                 @endforeach
                 <!-- End Slide -->
 
-                <!-- Slide -->
+                <!-- Slide>
                 <div class="slide overlay bg-img-3">
                     <div class="hero-container container">
                         <div class="hero-content">
@@ -40,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Slide -->
+                < End Slide -->
 
             </div>
         </section>
@@ -48,16 +49,15 @@
 
 <!-- About -->
 <section class="bg-grey" id="about">
-            <div class="container pt40 pb40">
-                <div class="vertical-align">
-
-                    <div class="col-md-6 text-left pr30 mt40 mb40">
-                        <h2>Qu'est ce que Ruya studio ? </h2>
-                        <p>Fusce faucibus tincidunt nulla, tincidunt sagittis magna venenatis quis. Proin commodo eu ipsum eu suscipit. In dapibus arcu sit amet imperdiet. Praesent condimentum nulla at mauris ornare. Praesent condimentum nulla at mauris ornare, eget consequat felis euismod. Praesent condimentum nulla at mauris ornare.</p>
-                        <p>Praesent condimentum nulla at mauris ornare, eget consequat felis euismod. Praesent condimentum nulla at mauris ornare. Fusce faucibus tincidunt nulla, tincidunt sagittis magna venenatis quis. Proin commodo eu ipsum eu suscipit.</p>
+            <div class="container">
+                <div class="">
+                    <div class="col-md-6 text-left">
+                        <h2>Qui sommes nous ? </h2>
+                        <p class="lead-4">Ruya studio, le partenaire de votre créativité met à votre disposition une large gamme de luminaires tendances.
+                            Nous proposons des solutions graphics et digitaux sur l'echél international, des videos animation de haut qualté selon votre besoin,
+                            branding et photographie, et aussi des platforms pour enrichez votre busniss.</p>
                     </div>
-
-                    <div class="col-md-6 mt50 mb50">
+                    <div class="col-md-6">
                         <div class="video-container">
                             <iframe src="http://player.vimeo.com/video/190203519?title=0&amp;byline=0&amp;portrait=0&amp;color=000222" allowfullscreen></iframe>
                         </div>
@@ -74,9 +74,9 @@
                 <div class="row">
 
                     <div class="col-sm-8 mr-auto text-center mb60 white">
-                        <h2>Our Capabilities</h2>
+                        <h2>Nos capacités</h2>
                         <hr class="separator">
-                        <p>We create experiences that transform brands, grow businesses and make<br>people’s lives better. We are dedicated to your success!</p>
+                        <p>Nous créons des expériences qui transforment les marques, développent les entreprises et améliorent leurs business .<br>Nous sommes dévoués à votre succès! </p>
                     </div>
                     <div class="col-sm-4 feature-left white">
                         <div class="box box-style8">
@@ -146,56 +146,37 @@
 <!-- End Features -->
 
 <!-- service -->
-<section class="pt80 bg-grey">
-            <div class="container pb50">
+<section class="pt100 pb140 bg-grey">
+            <div class="container pb30 pt30">
                 <div class="row">
                     <div class="col-sm-12 text-center">
                         <h1>Nos Services</h1>
                         <hr class="separator">
-                        <h5 class="subheading">TAKING OVER THE WORLD WITH SURPRISE.</h5>
+                        <h5 class="lead-3">Prendre le monde avec surprise .</h5>
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
-                    <div class="portfolio-no-gutter-fullwidth cbp" id="js-grid-no-gutter">
-                        @foreach($services as $service)
-                        <div class=" cbp-item print branding">
-                               <a href="{{route('service.category',$service->slug)}}" class="cbp-caption" >
-                                   <div class="cbp-caption-defaultWrap">
-                                       <img src="{{asset('storage/'.$service->full_image)}}" alt="#">
-                                   </div>
-                                   <div class="cbp-caption-activeWrap d-flex justify-content-center" style="background: linear-gradient(to right, {{$service->color_gradiant_1}}, {{$service->color_gradiant_2}});">
-                                       <div class="cbp-l-caption-alignCenter">
-                                           <div class="cbp-l-caption-body">
-                                               <div class="cbp-l-caption-title">
-                                                   <img src="{{asset('img/assets/Ruya-Branding-Logo-white.png')}}" class="img-fluid" alt="logo">
-                                                   {{$service->name}}
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </a>
-                           </div>
-                        @endforeach
+                    <div class="portfolio-no-gutter-fullwidth cbp" id="js-masonry-fullwidth" >
                             @foreach($services as $service)
-                                <div class=" cbp-item print branding">
-                                    <a href="{{route('service.category',$service->slug)}}" class="cbp-caption" >
-                                        <div class="cbp-caption-defaultWrap">
-                                            <img src="{{asset('storage/'.$service->full_image)}}" alt="#">
-                                        </div>
-                                        <div class="cbp-caption-activeWrap d-flex justify-content-center" style="background: linear-gradient(to right, {{$service->color_gradiant_1}}, {{$service->color_gradiant_2}});">
-                                            <div class="cbp-l-caption-alignCenter">
-                                                <div class="cbp-l-caption-body">
-                                                    <div class="cbp-l-caption-title">
-                                                        <img src="{{asset('img/assets/Ruya-Branding-Logo-white.png')}}" class="img-fluid" alt="logo">
-                                                        {{$service->name}}
-                                                    </div>
+                            <div class="cbp-item">
+                                <a href="{{route('service.category',$service->slug)}}" class="cbp-caption">
+                                    <div class="cbp-caption-defaultWrap">
+                                        <img src="{{asset('storage/'.$service->full_image)}}" alt="{{$service->name}}-image">
+                                    </div>
+                                    <div class="cbp-caption-activeWrap" style="background: linear-gradient(to right, {{$service->color_gradiant_1}}, {{$service->color_gradiant_2}});">
+                                        <div class="cbp-l-caption-alignCenter">
+                                            <div class="cbp-l-caption-body">
+                                                <div class="cbp-l-caption-title">
+                                                    <img src="{{asset('img/assets/Ruya-Branding-Logo-white.png')}}" width="65" alt="logo">
                                                 </div>
+                                                <div class="cbp-l-caption-title pt30">{{$service->name}}</div>
                                             </div>
                                         </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
+                            </div>
                             @endforeach
 
                     </div>
@@ -210,9 +191,9 @@
                 <div class="row">
 
                     <div class="col-sm-8 mr-auto text-center mb60">
-                        <h2>Our previous works</h2>
+                        <h2>Nos réalisation</h2>
                         <hr class="separator">
-                        <p>Try for free and start paying when you're ready. Lorem ipsum dolor sit amet, consecte<br>tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt sun.</p>
+                        <p>Ils nous ont fait confiance !</p>
                     </div>
                     <div class="container-fluid">
                         <div class="row">
@@ -220,11 +201,15 @@
                             <div class="portfolio-gallery-video cbp" id="js-masonry-fullwidth">
                                 @foreach($portfolio as $item)
                                 <div class="cbp-item print branding">
-                                    <a href="https://www.youtube.com/watch?v=USVg_E7r20g" class="cbp-lightbox cbp-caption">
+                                    @if(!empty($item->video_link))
+                                    <a href="{{$item->video_link}}" class="cbp-lightbox cbp-caption">
+                                        @else
+                                            <a href="{{asset('storage/'.$item->image)}}" class="cbp-lightbox cbp-caption">
+                                        @endif
                                         <div class="cbp-caption-defaultWrap">
                                             <img src="{{asset('storage/'.$item->image)}}">
                                         </div>
-                                        <div class="cbp-caption-activeWrap">
+                                        <div class="cbp-caption-activeWrap" >
                                             <div class="cbp-l-caption-alignCenter">
                                                 <div class="cbp-l-caption-body">
                                                     <div class="cbp-l-caption-title"><i class="ion-ios-play"></i></div>
@@ -254,7 +239,7 @@
                         <div class="testimonials white owl-carousel">
 
                             <div>
-                                <h2>What People Say</h2>
+                                <h2>Ce que disent Sur nous </h2>
                                 <hr class="separator">
                                 <h4>This guys are amazing! They were so quick to respond and let me tell you, they are all knowing! I highly<br />recommend their themes! They are all about making their clients happy!</h4>
                                 <h5 class="subheading">Jack Westbrook</h5>
@@ -287,7 +272,9 @@
 
 <!-- partners Section -->
         <section class="pt70 pb70 bg-grey">
-            <div class="container">
+            <div class="container text-center">
+                <h2>Nos partenaire </h2>
+                <hr class="separator">
                 <div class="row">
 
                     <div id="clients-slider-2" class="owl-carousel">

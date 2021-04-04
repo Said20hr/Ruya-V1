@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Service;
 use App\Models\Team;
 use Illuminate\Http\Request;
 
@@ -17,10 +18,12 @@ class AboutpageController extends Controller
     {
         $abouts=About::get();
         $team=Team::all();
+        $services=Service::all();
         return view('pages.about-us')
             ->with([
                 'abouts'=>$abouts,
                 'team'=>$team,
+                'services'=>$services,
             ]);
     }
 

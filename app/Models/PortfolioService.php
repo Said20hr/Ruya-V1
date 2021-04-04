@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class PortfolioService extends Model
 {
     use HasFactory;
-    public function portfolio()
-    {
-        $this->hasMany('App\Models\Portfolio');
-    }
+
+    protected $table='portfolio_service';
+
+    protected $fillable =['portfolio_id','service_id'];
 }

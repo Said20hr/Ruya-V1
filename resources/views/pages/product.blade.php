@@ -3,6 +3,7 @@
 <html>
 <head>
     @section('title', 'packName')
+    <link rel="icon" href="{{ URL::asset('eye-only.svg') }}" type="image/x-icon"/>
 </head>
 <body>
 @section('content')

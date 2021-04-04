@@ -19,9 +19,6 @@ class CreatePortfoliosTable extends Migration
             $table->text('image');
             $table->text('video_link')->nullable();
             $table->boolean('featured')->default(false);
-            $table->bigInteger('service_id')->unsigned()->nullable();
-            $table->foreign('service_id')->references('id')
-                ->on('services')->onDelete('cascade');
             $table->timestamps();
         });
     }

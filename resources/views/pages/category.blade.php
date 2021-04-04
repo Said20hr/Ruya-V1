@@ -2,11 +2,12 @@
     <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    @section('title', 'CategoryName')
+    @section('title', $service->name)
+    <link rel="icon" href="{{ URL::asset('eye-only.svg') }}" type="image/x-icon"/>
 </head>
 <body>
 @section('content')
-@foreach($services as $service)
+
     <!-- hero page -->
         <section class="hero-fullwidth parallax overlay" style="background-image: url({{asset('storage/'.$service->Background_image)}})">
             <div class="hero-container container">
@@ -42,7 +43,7 @@
 
     </section>
 <!-- end Description -->
-@endforeach
+
 <!-- packs -->
         <section class="pt60 pb80 bg-grey-2" id="packs">
             <div class="col-sm-8 mr-auto text-center mb60">

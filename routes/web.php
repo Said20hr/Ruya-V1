@@ -17,12 +17,14 @@ Route::get('/',[App\Http\Controllers\HomeController::class,'index'])->name('home
 Route::get('/about',[App\Http\Controllers\AboutpageController::class,'index'])->name('about');
 Route::view('/blog','pages.blog')->name('blog');
 Route::view('/checkout','pages.checkout')->name('checkout');
-Route::view('/contact','pages.contact')->name('contact');
-Route::get('/service',[App\Http\Controllers\ServiceController::class,'index'])->name('service');
-Route::get('/service/{category}',[App\Http\Controllers\ServiceController::class,'show'])->name('service.category');
+Route::get('/contact',[App\Http\Controllers\ContactController::class,'index'])->name('contact');
+Route::post('/contact',[App\Http\Controllers\ContactController::class,'store'])->name('contact.form');
+Route::get('/services',[App\Http\Controllers\ServiceController::class,'index'])->name('service');
+Route::get('/services/{category}',[App\Http\Controllers\ServiceController::class,'show'])->name('service.category');
 Route::view('/cart','pages.shop-cart')->name('cart');
 Route::view('/product','pages.product')->name('product');
-Route::view('/portfolio','pages.clients')->name('portfolio');
+
+Route::get('/portfolio',[App\Http\Controllers\portfolioContoller::class,'index'])->name('portfolio');
 
 Auth::routes();
 
