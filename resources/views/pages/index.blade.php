@@ -78,63 +78,96 @@
                         <hr class="separator">
                         <p>Nous créons des expériences qui transforment les marques, développent les entreprises et améliorent leurs business .<br>Nous sommes dévoués à votre succès! </p>
                     </div>
-                    <div class="col-sm-4 feature-left white">
-                        <div class="box box-style8">
-                        <i class="icon-telescope size-3x color pr20"></i>
-                        <i class="icon-telescope back-icon"></i>
+                    <div class="col-sm-4 feature-center white">
+                        <div class="box boxing box-style6">
+                        <i class="icon-video size-3x color icone"></i>
+                        <i class="icon-video back-icon"></i>
                         <div class="feature-left-content">
-                            <h4>Stunning Design</h4>
-                            <p class="pt10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                            <h4>MOTION GRAPHIC</h4>
+                            <p class="pt10">
+                                We create dedicated Website application to your business goals.
+                            </p>
+                            <p>
+                                We advise at every stage so that the users of your
+                                app get the best product in line with the current technology.
+                            </p>
                         </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 feature-left white">
-                        <div class="box box-style8">
-                        <i class="icon-circle-compass size-3x color pr20"></i>
-                        <i class="icon-circle-compass back-icon"></i>
+                    <div class="col-sm-4 feature-center white">
+                        <div class="box boxing box-style6">
+                        <i class="icon-laptop size-3x color icone"></i>
+                        <i class="icon-laptop back-icon"></i>
                         <div class="feature-left-content">
-                            <h4>Retina Optimized</h4>
-                            <p class="pt10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                            <h4>WEB APPLICATIONS</h4>
+                            <p class="pt10">
+                                We create dedicated Website application to your business goals.
+                            </p>
+                            <p>
+                                We advise at every stage so that the users of your
+                                app get the best product in line with the current technology.
+                            </p>
+
                         </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 feature-left white">
-                        <div class="box box-style8">
-                        <i class="icon-genius size-3x color pr20"></i>
-                        <i class="icon-genius back-icon"></i>
+                    <div class="col-sm-4 feature-center white">
+                        <div class="box boxing box-style6">
+                        <i class="icon-camera size-3x color icone"></i>
+                        <i class="icon-camera back-icon"></i>
                         <div class="feature-left-content">
-                            <h4>Fast & Smooth</h4>
-                            <p class="pt10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                            <h4>PHOTOGRAPHY</h4>
+                            <p class="pt10">
+                                We create dedicated Website application to your business goals.
+                            </p>
+                            <p>
+                                We advise at every stage so that the users of your
+                                app get the best product in line with the current technology.
+                            </p>
                         </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 feature-left white">
-                        <div class="box box-style8">
-                            <i class="icon-telescope size-3x color pr20"></i>
-                            <i class="icon-telescope back-icon"></i>
+                    <div class="col-sm-4 feature-center white">
+                        <div class="box boxing box-style6">
+                            <i class="icon-edit size-3x color icone"></i>
+                            <i class="icon-edit back-icon"></i>
                             <div class="feature-left-content">
-                                <h4>Stunning Design</h4>
-                                <p class="pt10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                                <h4>CONTENT CREATION</h4>
+                                <p class="pt10">
+                                    We create dedicated Website application to your business goals.
+                                </p>
+                                <p>
+                                    We advise at every stage so that the users of your
+                                    app get the best product in line with the current technology.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 feature-left white">
-                        <div class="box box-style8">
-                            <i class="icon-circle-compass size-3x color pr20"></i>
-                            <i class="icon-circle-compass back-icon"></i>
+                    <div class="col-sm-4 feature-center white">
+                        <div class="box boxing box-style6">
+                            <i class="icon-basket size-3x color icone"></i>
+                            <i class="ion-ios-cart-outline back-icon "></i>
                             <div class="feature-left-content">
-                                <h4>Retina Optimized</h4>
-                                <p class="pt10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                                <h4 class="bold">E-COMMERCE PLATFORMS</h4>
+                                <p class="pt10">We create online shops and marketplace platforms.</p>
+                                    <p>We provide solutions for both B2B and B2C markets.</p>
+
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 feature-left white">
-                        <div class="box box-style8">
-                            <i class="icon-genius size-3x color pr20"></i>
-                            <i class="icon-genius back-icon"></i>
+                    <div class="col-sm-4 feature-center white">
+                        <div class="box boxing box-style6">
+                            <i class="icon-megaphone size-3x color icone"></i>
+                            <i class="icon-megaphone back-icon"></i>
                             <div class="feature-left-content">
-                                <h4>Fast & Smooth</h4>
-                                <p class="pt10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                                <h4>DIGITAL MARKETING</h4>
+                                <p class="pt10">
+                                    We create dedicated Website application to your business goals.
+                                </p>
+                                <p>
+                                    We advise at every stage so that the users of your
+                                    app get the best product in line with the current technology.
+                                </p>
                             </div>
                         </div>
                     </div>

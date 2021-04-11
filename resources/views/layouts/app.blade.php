@@ -36,6 +36,7 @@
             <footer>
                 @include('includes.footer')
             </footer>
+            <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
             <a id="back-to-top"><i class="icon ion-chevron-up"></i></a>
             <!-- Scripts -->
             <script src="{{asset('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')}}"></script>

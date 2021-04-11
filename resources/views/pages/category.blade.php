@@ -25,16 +25,26 @@
 <!-- Description -->
     <section class="bg-grey">
         <div class="container pt40 pb40">
-            <div class="vertical-align">
+            <div class="">
 
-                <div class="col-md-6 text-left pr30 mt40 mb40">
-                    <h2>Category description</h2>
-                    <p>{!! $service->description !!}</p>
+                <div class="col-md-5 text-left pr20 mt50 mb50">
+                   <div>
+                       <h3 class="bold dark pb5">Ruya digital solution</h3>
+                       <p class="lead-3 dark pr10 ">
+                       We are a professional Laravel Development Company, offering specialized services which help you
+                           to realize the full potential of Laravel framework. We carefully understand the specific needs
+                           of our client and develop solutions that meet their needs perfectly.
+                           If you have the idea of developing a website or a mobile app, we would help
+                           you bring that idea into reality by utilizing the power of Laravel.
+                       </p>
+                   </div>
                 </div>
 
-                <div class="col-md-6  mt50 mb50">
+                <div class="col-md-7 mt50 mb50">
                     <div class="video-container">
-                        <iframe src="http://player.vimeo.com/video/115919099?title=0&amp;byline=0&amp;portrait=0&amp;color=fff" allowfullscreen></iframe>
+                        <iframe src="//player.vimeo.com/video/115919099?color=e73332&title=0&amp;byline=0&amp;portrait=0" width="460"
+                                height="265" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -43,11 +53,184 @@
 
     </section>
 <!-- end Description -->
+    <!-- packs -->
+    <section class="pt60 pb80 bg-white" id="packs">
+        <div class="container">
+            <h2 class="uppercase bold">Our package</h2>
+            <p class="lead-3 dark text-justify-lg">The info below allows you to compare the packages. Choose which one suits best your business goals and targeted audience.
+                We guarantee to start video shooting process as soon as we sign the contract and brief all details.</p>
+        </div>
+        <div class="container pt30 pb30">
+            <div class="pt30 pb30">
+                <div class="container bg-grey-2">
+                    <div class="row">
+                        <div class="col-md-6 pt30 pb20 pl30 pr30">
+                            <h3 class="dark bold pt0 mt0">Micro</h3>
+                            <p class="dark pl10">
+                                Vivamus nunc nunc, lacinia ac nulla eget. Vivamus nunc nunc, lacinia ac nulla eget, hendrerit ultrices sem.
+                                Pellentesque congue sodales lacinia. In eu massa semper, aliquam augue in, auctor nisi. Aliquam pharetra orci ligula, et dignissim neque porttitor vel. Curabitur quis malesuada erat,
+                                in condimentum urna.
+                            </p>
+                            <ul class="list-icons list-group-item-text pl20">
+                                <li class="lead-4 dark pb10"><i class="ion-checkmark-circled color"></i> 45 seconde</li>
+                                <li class="lead-4 dark pb10"><i class="ion-checkmark-circled color"></i> 5 signes Animé</li>
+                                <li class="lead-4 dark pb10"><i class="ion-checkmark-circled color"></i> Voix original</li>
+                                <li class="lead-4 dark pb10"><i class="ion-checkmark-circled color"></i> Annonce publicitaire</li>
+                                <li class="lead-4 dark pb10"><i class="ion-checkmark-circled color"></i> Design moderne</li>
+                            </ul>
+                            <div class="d-flex pt15 pl0 block-sm">
+                                <a href="#" class="btn btn-lg btn-primary lead-3">Commander le pack <i class="ion ion-ios-cart"></i></a>
+                                <a href="#" class="btn btn-lg btn-ghost-color lead-3">Lire les details <i class="ion ion-chevron-down"></i></a>
 
+                            </div>
+                        </div>
+                        <div class="col-md-6 pt30 pb20 pl30 pr30">
+                            <div class="d-flex" style="justify-content:space-between">
+                                <img src="{{asset('img/app/animated1.gif')}}" alt="" width="275" height="190">
+                                <img src="{{asset('img/app/animated2.gif')}}" alt="" width="275" height="190">
+                            </div>
+                            <div class="d-flex pt20 " style="justify-content:space-between">
+                                <img src="{{asset('img/app/animated1.gif')}}" alt="" width="275" height="190">
+                                <img src="{{asset('img/app/animated2.gif')}}" alt="" width="275" height="190">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+
+                    </div>
+                </div>
+            </div>
+            <div class="pt30 pb30">
+                <div class="container bg-grey-2">
+                    <div class="row">
+                        <div class="col-md-6 pt30 pb30 pl30 pr30">
+                            <h3 class="dark bold pt0 mt0">Standart</h3>
+                            <p class="lead-3 dark pl10">It includes creating simple visuals, English voiceover, and stock music</p>
+                            <div class="d-flex pt15 pb15 pl0 block-sm">
+                                <a href="#" class="btn btn-lg btn-primary lead-3">Commander le pack <i class="ion ion-ios-cart"></i></a>
+                                <a href="#" class="btn btn-lg btn-ghost-color lead-3">Visioner l'example <i class="ion ion-play"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pt30 pb30 pl30 pr30">
+                            <div class="d-flex " style="justify-content:space-between">
+                                <img src="{{asset('img/app/animated3.gif')}}" alt="" width="275" height="200">
+                                <img src="{{asset('img/app/animated4.gif')}}" alt="" width="275" height="200">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt30 pb30">
+                <div class="container bg-grey-2">
+                    <div class="row">
+                        <div class="col-md-6 pt30 pb30 pl30 pr30">
+                            <h3 class="dark bold pt0 mt0">Pro</h3>
+                            <p class="lead-3 dark pl10">It includes creating simple visuals, English voiceover, and stock music</p>
+                            <div class="d-flex pt15 pb15 pl0">
+                                <a href="#" class="btn btn-lg btn-primary lead-3">Commander le pack <i class="ion ion-ios-cart"></i></a>
+                                <a href="#" class="btn btn-lg btn-ghost-color lead-3">Visioner l'example <i class="ion ion-play"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pt30 pb30 pl30 pr30">
+                            <div class="d-flex " style="justify-content:space-between">
+                                <img src="{{asset('img/app/animated5.gif')}}" alt="" width="275" height="200">
+                                <img src="{{asset('img/app/animated1.gif')}}" alt="" width="275" height="200">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="pt60 pb80 bg-white" >
+        <div class="container">
+            <div class="row" style="margin-top:-0vh">
+                <div class="app-gallery cbp" id="js-grid-slider">
+
+                    <div class="cbp-item">
+                        <a href="{{asset('img/app/site.jpg')}}" class="cbp-lightbox cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="{{asset('img/app/site.jpg')}}" alt="#">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title"><i class="icon-magnifying-glass size-1x"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item">
+                        <a href="{{asset('img/portfolio/app/1.jpg')}}" class="cbp-lightbox cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="{{asset('img/portfolio/app/1.jpg')}}" alt="#">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title"><i class="icon-magnifying-glass size-1x"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item">
+                        <a href="{{asset('img/portfolio/app/1.jpg')}}" class="cbp-lightbox cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="{{asset('img/portfolio/app/1.jpg')}}" alt="#">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title"><i class="icon-magnifying-glass size-1x"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item">
+                        <a href="{{asset('img/portfolio/app/1.jpg')}}" class="cbp-lightbox cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="{{asset('img/portfolio/app/1.jpg')}}" alt="#">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title"><i class="icon-magnifying-glass size-1x"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item">
+                        <a href="{{asset('img/portfolio/app/1.jpg')}}" class="cbp-lightbox cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="{{asset('img/portfolio/app/1.jpg')}}" alt="#">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title"><i class="icon-magnifying-glass size-1x"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Slide -->
 <!-- packs -->
         <section class="pt60 pb80 bg-grey-2" id="packs">
             <div class="col-sm-8 mr-auto text-center mb60">
-                <h2>Les packs disponible</h2>
+                <h2>Commandiez immédiatement.</h2>
                 <hr class="separator">
                 <p>We create experiences that transform brands, grow businesses and make<br>people’s lives better. We are dedicated to your success!</p>
             </div>

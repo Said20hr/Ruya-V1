@@ -499,7 +499,7 @@
 			width: 480,
 			cols: 2
 		}, {
-			width: 320,
+			width: 100,
 			cols: 1
 		}],
 		defaultFilter: '*',
@@ -558,7 +558,7 @@
 			cols: 3
 		}, {
 			width: 800,
-			cols: 4
+			cols: 3
 		}, {
 			width: 480,
 			cols: 2

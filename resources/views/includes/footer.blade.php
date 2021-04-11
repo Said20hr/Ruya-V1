@@ -15,11 +15,11 @@
 
                 <div class="col-md-3 pt20">
                     <div class="subheading">Nos Services</div>
+
                     <ul class="footer-recent-posts pt20">
-                        <li><a href="#">Brand indentity</a></li>
-                        <li><a href="#">Marketng & social media</a></li>
-                        <li><a href="#">Video motion</a></li>
-                        <li><a href="#">Ruya food</a></li>
+                        @foreach($services as $service)
+                            <li><a href="{{route('service.category',$service->slug)}}">{{$service->name}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
 
