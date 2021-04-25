@@ -17,11 +17,11 @@ class CreateServicesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
-            $table->string('sub-title')->nullable();
+            $table->string('slogan')->nullable();
+            $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->text('Background_image')->nullable();
             $table->text('full_image')->nullable();
-            $table->text('icon')->nullable();
             $table->string('video_link')->nullable();
             $table->string('color_gradiant_1')->nullable();
             $table->string('color_gradiant_2')->nullable();

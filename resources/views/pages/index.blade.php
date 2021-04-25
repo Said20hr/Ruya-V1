@@ -48,125 +48,167 @@
 <!-- End Page Hero -->
 
 <!-- About -->
-<section class="bg-grey" id="about">
-            <div class="container">
+<section class="bg-grey   bg-img-10" >
+            <div class="container pt80 pb80">
                 <div class="">
                     <div class="col-md-6 text-left">
-                        <h2>Qui sommes nous ? </h2>
-                        <p class="lead-4">Ruya studio, le partenaire de votre créativité met à votre disposition une large gamme de luminaires tendances.
-                            Nous proposons des solutions graphics et digitaux sur l'echél international, des videos animation de haut qualté selon votre besoin,
-                            branding et photographie, et aussi des platforms pour enrichez votre busniss.</p>
+                        <h3 class="bold  dark">Qui sommes nous ?</h3>
+                        <div class="pr50 pt10">
+                            <div class="lead-3 text-justify-lg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec pretium felis. Ut tempor,
+                                justo non vehicula blandit, nunc magna convallis odio, eget porttitor urna erat id ante.
+                                Vivamus malesuada placerat justo sed mattis. Fusce suscipit nisi pharetra odio mollis,
+                                egestas aliquam velit consectetur. Quisque vel euismod augue. In blandit, magna eget euismod porttitor,
+                                ligula nulla varius ipsum, sed dictum ex turpis sagittis mauris. Donec fermentum fringilla cursus.
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="video-container">
-                            <iframe src="http://player.vimeo.com/video/190203519?title=0&amp;byline=0&amp;portrait=0&amp;color=000222" allowfullscreen></iframe>
+
+                    <div class="col-md-6 ">
+                        <div class="video-container pt50">
+                            <iframe src="http://player.vimeo.com/video/190203519?autoplay=1&loop=1&title=0&amp;byline=0&amp;portrait=0&amp;color=fff&amp;border=5" allowfullscreen></iframe>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </section>
-<!-- End About -->
 
+    <div class="container pt80 pb80 ">
+        <div class="col-sm-10 mr-auto text-center mb60 ">
+            <h3 class="bold  dark">Nos services</h3>
+            <hr class="separator">
+            <p class="lead-3 dark">Nous créons des expériences qui transforment les marques, développent les entreprises et améliorent leurs business .<br>Nous sommes dévoués à votre succès! </p>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4 col-sm-4 feature-center">
+                <div class="box box-style8">
+                <img src="{{asset('img/services/022-digital-campaign.svg')}}" width="75" class="icone">
+                <img src="{{asset('img/services/022-digital-campaign.svg')}}" class="back-icon">
+                <div class="feature-left-content">
+                    <h4 class="bold dark">LES ANIMATIONS GRAPHIQUE</h4>
+                    <p class="pt10 dark">
+                        Diffusez votre message de marque grâce à un contenu visuel créatif.
+                    </p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 feature-center">
+                <div class="box box-style8">
+                    <img src="{{asset('img/services/web.svg')}}" width="75" class="icone">
+                    <img src="{{asset('img/services/web.svg')}}" class="back-icon">
+                    <div class="feature-left-content">
+                        <h4 class="bold">LES APPLICATIONS ET SITES WEB</h4>
+                        <p class="pt10 dark">
+                            Au bout d'un niveau de réussite supérieur avec une applications/sites Web personnalisé.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 feature-center">
+                <div class="box box-style8">
+                <img src="{{asset('img/services/Photography.svg')}}" width="75" class="icone">
+                <img src="{{asset('img/services/Photography.svg')}}" class="back-icon">
+                <div class="feature-left-content">
+                    <h4 class="bold">PHOTOGRAPHIE</h4>
+                    <p class="pt10 dark">
+                        Boostez vos produits avec des plans de photographie et de montage flexibles.
+                    </p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 feature-center">
+                <div class="box box-style8">
+                <img src="{{asset('img/services/content.svg')}}" width="75" class="icone">
+                <img src="{{asset('img/services/content.svg')}}" class="back-icon">
+                <div class="feature-left-content">
+                    <h4 class="bold">CRÉATION DE CONTENU </h4>
+                    <p class="pt10 dark">
+                        Nous créons du contenu dédié pour atteindre vos objectifs commerciaux.
+                    </p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 feature-center">
+                <div class="box box-style8">
+                <img src="{{asset('img/services/commerce.svg')}}" width="75" class="icone">
+                <img src="{{asset('img/services/commerce.svg')}}" class="back-icon">
+                <div class="feature-left-content">
+                    <h4 class="bold">PLATEFORMES E-COMMERCE </h4>
+                    <p class="pt10 dark">Gérez votre plateforme d'E-commerce avec les meilleures solutions électronique .</p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 feature-center">
+                <div class="box box-style8">
+                <img src="{{asset('img/services/marketing.svg')}}" width="75" class="icone">
+                <img src="{{asset('img/services/marketing.svg')}}" class="back-icon">
+                <div class="feature-left-content">
+                    <h4 class="bold">LE MARKETING NUMÉRIQUE </h4>
+                    <p class="pt10 dark">
+                        Atteignez un public ciblé grâce au marketing numérique intégré.
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
 <!-- Features -->
-<section class="pt80 pb80 parallax overlay bg-shortcodes">
-            <div class="container ">
+<section class="pt80 pb100 parallax overlay bg-shortcodes">
+            <div class="container">
                 <div class="row">
-
-                    <div class="col-sm-8 mr-auto text-center mb60 white">
-                        <h2>Nos capacités</h2>
+                    <div class="col-sm-10 mr-auto text-center mb60 white">
+                        <h3 class="bold">Nos avantages </h3>
                         <hr class="separator">
-                        <p>Nous créons des expériences qui transforment les marques, développent les entreprises et améliorent leurs business .<br>Nous sommes dévoués à votre succès! </p>
-                    </div>
-                    <div class="col-sm-4 feature-center white">
-                        <div class="box boxing box-style6">
-                        <i class="icon-video size-3x color icone"></i>
-                        <i class="icon-video back-icon"></i>
-                        <div class="feature-left-content">
-                            <h4>MOTION GRAPHIC</h4>
-                            <p class="pt10">
-                                We create dedicated Website application to your business goals.
-                            </p>
-                            <p>
-                                We advise at every stage so that the users of your
-                                app get the best product in line with the current technology.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 feature-center white">
-                        <div class="box boxing box-style6">
-                        <i class="icon-laptop size-3x color icone"></i>
-                        <i class="icon-laptop back-icon"></i>
-                        <div class="feature-left-content">
-                            <h4>WEB APPLICATIONS</h4>
-                            <p class="pt10">
-                                We create dedicated Website application to your business goals.
-                            </p>
-                            <p>
-                                We advise at every stage so that the users of your
-                                app get the best product in line with the current technology.
-                            </p>
+                        <p class="lead">Nous créons des expériences qui transforment les marques, développent les entreprises et améliorent leurs business .<br>Nous sommes dévoués à votre succès! </p>
 
-                        </div>
-                        </div>
                     </div>
-                    <div class="col-sm-4 feature-center white">
-                        <div class="box boxing box-style6">
-                        <i class="icon-camera size-3x color icone"></i>
-                        <i class="icon-camera back-icon"></i>
-                        <div class="feature-left-content">
-                            <h4>PHOTOGRAPHY</h4>
-                            <p class="pt10">
-                                We create dedicated Website application to your business goals.
-                            </p>
-                            <p>
-                                We advise at every stage so that the users of your
-                                app get the best product in line with the current technology.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 feature-center white">
-                        <div class="box boxing box-style6">
-                            <i class="icon-edit size-3x color icone"></i>
-                            <i class="icon-edit back-icon"></i>
+                    <div class="col-sm-3 feature-center white">
+                        <div class="box box-style2">
+                            <i class="icon-tools size-6x"></i>
+                            <i class="icon-tools back-icon"></i>
                             <div class="feature-left-content">
-                                <h4>CONTENT CREATION</h4>
+                                <h4 class="bold">Creativité</h4>
                                 <p class="pt10">
-                                    We create dedicated Website application to your business goals.
-                                </p>
-                                <p>
-                                    We advise at every stage so that the users of your
-                                    app get the best product in line with the current technology.
+                               La clé du succès sera de faire appel à notre créativité afin d'offrir des services complémentaires à nos clients,
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 feature-center white">
-                        <div class="box boxing box-style6">
-                            <i class="icon-basket size-3x color icone"></i>
-                            <i class="ion-ios-cart-outline back-icon "></i>
+                    <div class="col-sm-3 feature-center white">
+                        <div class="box box-style2">
+                            <i class="icon-lightbulb size-6x"></i>
+                            <i class="icon-lightbulb back-icon"></i>
                             <div class="feature-left-content">
-                                <h4 class="bold">E-COMMERCE PLATFORMS</h4>
-                                <p class="pt10">We create online shops and marketplace platforms.</p>
-                                    <p>We provide solutions for both B2B and B2C markets.</p>
-
+                                <h4 class="bold">Innovation</h4>
+                                <p class="pt10">
+                                    Elle définit un nouveau produit, inventif, répondant à une problématique technique et applicable industriellement.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 feature-center white">
-                        <div class="box boxing box-style6">
-                            <i class="icon-megaphone size-3x color icone"></i>
-                            <i class="icon-megaphone back-icon"></i>
+                    <div class="col-sm-3 feature-center white">
+                        <div class="box box-style2">
+                            <i class="icon-trophy size-6x"></i>
+                            <i class="icon-trophy back-icon"></i>
                             <div class="feature-left-content">
-                                <h4>DIGITAL MARKETING</h4>
+                                <h4 class="bold">L’esprit d’équipe</h4>
                                 <p class="pt10">
-                                    We create dedicated Website application to your business goals.
+                                    Nous avons choisi cette valeur pour ce qu’elle apporte d’Humain, de collaboratif, de partage, et de diversité.
                                 </p>
-                                <p>
-                                    We advise at every stage so that the users of your
-                                    app get the best product in line with the current technology.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 feature-center white">
+                        <div class="box box-style2">
+                        <i class="icon-alarmclock size-6x"></i>
+                        <i class="icon-alarmclock back-icon"></i>
+                        <div class="feature-left-content">
+                                <h4 class="bold">Livraison à temps</h4>
+                                <p class="pt10">
+                                    Grâce a Nos pratique agiles,nos services sont rapides,et le suivi possible avec garantie de livraison à temps.
                                 </p>
                             </div>
                         </div>
@@ -179,17 +221,17 @@
 <!-- End Features -->
 
 <!-- service -->
-<section class="pt100 pb140 bg-grey">
-            <div class="container pb30 pt30">
+<section class="bg-img-11 ">
+            <div class="container pt80 pb100 ">
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <h1>Nos Services</h1>
+                        <h3 class="bold dark">Nos département</h3>
                         <hr class="separator">
-                        <h5 class="lead-3">Prendre le monde avec surprise .</h5>
+                        <p class="lead-3 dark">Nous offrons un éventail complet de services pour aider les entreprises à mieux fonctionner.</p>
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container mb60">
                 <div class="row">
                     <div class="portfolio-no-gutter-fullwidth cbp" id="js-masonry-fullwidth" >
                             @foreach($services as $service)
@@ -209,58 +251,65 @@
                                         </div>
                                     </div>
                                 </a>
+                                <h4 class="text-center pt20 bold">- {{$service->name}} -</h4>
                             </div>
-                            @endforeach
 
+                            @endforeach
                     </div>
+
                 </div>
             </div>
-        </section>
-<!-- End service -->
 
-<!-- Start works List -->
-<section class="pt120 pb100">
-            <div class="container">
+            <div class="container pt80 pb80">
                 <div class="row">
-
-                    <div class="col-sm-8 mr-auto text-center mb60">
-                        <h2>Nos réalisation</h2>
+                    <div class="col-sm-8 mr-auto text-center pb30">
+                        <h3 class="bold dark">Nos réalisations</h3>
                         <hr class="separator">
-                        <p>Ils nous ont fait confiance !</p>
+                        <p class="lead-3 dark">Découvrez nos plus belles réalisations ainsi que de nombreux projets dans lesquels Ruya Studio s'est impliqué.</p>
                     </div>
-                    <div class="container-fluid">
-                        <div class="row">
-
-                            <div class="portfolio-gallery-video cbp" id="js-masonry-fullwidth">
-                                @foreach($portfolio as $item)
-                                <div class="cbp-item print branding">
+                    <div class="container">
+                        <div class="portfolio-grid-boxed cbp" id="js-grid">
+                            @foreach($portfolio as $item)
+                                <div class="cbp-item">
                                     @if(!empty($item->video_link))
-                                    <a href="{{$item->video_link}}" class="cbp-lightbox cbp-caption">
-                                        @else
-                                            <a href="{{asset('storage/'.$item->image)}}" class="cbp-lightbox cbp-caption">
-                                        @endif
-                                        <div class="cbp-caption-defaultWrap">
-                                            <img src="{{asset('storage/'.$item->image)}}">
-                                        </div>
-                                        <div class="cbp-caption-activeWrap" >
-                                            <div class="cbp-l-caption-alignCenter">
-                                                <div class="cbp-l-caption-body">
-                                                    <div class="cbp-l-caption-title"><i class="ion-ios-play"></i></div>
+                                        <a href="{{$item->video_link}}" class="cbp-lightbox cbp-caption">
+                                            <div class="cbp-caption-defaultWrap">
+                                                <img src="{{asset('storage/'.$item->image)}}">
+                                            </div>
+                                            <div class="cbp-caption-activeWrap" >
+                                                <div class="cbp-l-caption-alignCenter">
+                                                    <div class="cbp-l-caption-body">
+                                                        <div class="cbp-l-caption-title">
+                                                            <i class="ion-ios-play size-4x"></i>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    @else
+                                            <a href="{{asset('storage/'.$item->image)}}" class="cbp-lightbox cbp-caption">
+                                                <div class="cbp-caption-defaultWrap">
+                                                    <img src="{{asset('storage/'.$item->image)}}">
+                                                </div>
+                                                <div class="cbp-caption-activeWrap" >
+                                                    <div class="cbp-l-caption-alignCenter">
+                                                        <div class="cbp-l-caption-body">
+                                                            <div class="cbp-l-caption-title">
+                                                                <i class="ion-ios-play size-4x"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                    @endif
+
                                 </div>
-                                @endforeach
-
-                            </div>
-
+                            @endforeach
                         </div>
                     </div>
-
                 </div>
             </div>
-        </section>
+</section>
 <!-- End Price List -->
 
 <!-- Testimonials -->
@@ -280,19 +329,19 @@
                             </div>
 
                             <div>
-                                <h2>What People Say</h2>
+                                <h2>Ce que disent Sur nous </h2>
                                 <hr class="separator">
-                                <h4>I have purchased tens of templates from ThemeForest and this one is undoubtedly the best I ever tried.<br />Easy to edit, nicely coded. You guys, you did a great job here!</h4>
-                                <h5 class="subheading">Lindsay Swanson</h5>
-                                <a href="#">Wunderkind Inc</a>
+                                <h4>This guys are amazing! They were so quick to respond and let me tell you, they are all knowing! I highly<br />recommend their themes! They are all about making their clients happy!</h4>
+                                <h5 class="subheading">Jack Westbrook</h5>
+                                <p>Web Developer</p>
                             </div>
 
                             <div>
-                                <h2>What People Say</h2>
+                                <h2>Ce que disent Sur nous </h2>
                                 <hr class="separator">
-                                <h4>This is one of the best themes that I bought on ThemeForest. It is well documented and well coded but<br />the best of all is the friendly and quick support behind.</h4>
-                                <h5 class="subheading">Jared Jackson</h5>
-                                <p>App Developer</p>
+                                <h4>This guys are amazing! They were so quick to respond and let me tell you, they are all knowing! I highly<br />recommend their themes! They are all about making their clients happy!</h4>
+                                <h5 class="subheading">Jack Westbrook</h5>
+                                <p>Web Developer</p>
                             </div>
 
                         </div>
@@ -304,9 +353,9 @@
 <!-- End Testimonials -->
 
 <!-- partners Section -->
-        <section class="pt70 pb70 bg-grey">
+        <section class="pt60 pb60 bg-img-13">
             <div class="container text-center">
-                <h2>Nos partenaire </h2>
+                <h3 class="bold dark">Nos partenaire </h3>
                 <hr class="separator">
                 <div class="row">
 

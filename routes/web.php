@@ -23,6 +23,7 @@ Route::get('/services',[App\Http\Controllers\ServiceController::class,'index'])-
 Route::get('/services/{category}',[App\Http\Controllers\ServiceController::class,'show'])->name('service.category');
 Route::view('/cart','pages.shop-cart')->name('cart');
 Route::view('/product','pages.product')->name('product');
+Route::get('/order',[App\Http\Controllers\ServiceController::class,'order'])->name('order-now');
 
 Route::get('/portfolio',[App\Http\Controllers\portfolioContoller::class,'index'])->name('portfolio');
 

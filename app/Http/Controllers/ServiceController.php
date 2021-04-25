@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FAQ;
+use App\Models\Portfolio;
 use App\Models\Service;
+use App\Models\ServiceDetails;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -54,14 +57,27 @@ class ServiceController extends Controller
        if(request()->category) {
             $service= Service::where('slug','=',$slug)->firstOrfail();
             $services= Service::all();
+            $details=ServiceDetails::where('service_id',$service->id)->first();
+           $portfolios = Portfolio::with('services')->whereHas('services', function ($query) use($slug) {
+               $query->where('slug', $slug);
+           })->take(3)->get();
+
 
             return view('pages.category')->with([
                 'service'=>$service,
                 'services'=>$services,
+                'portfolios'=>$portfolios,
+                'details'=>$details,
             ]);
 
 
         }
+    }
+    public function order()
+    {
+        $serices = Service::all();
+        return view('pages.order')
+            ->with('services',$serices);
     }
 
     /**

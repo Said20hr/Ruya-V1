@@ -21,6 +21,7 @@
     <link href="{{asset('img/assets/favicon.png')}}" rel="icon" type="image/png">
     <link href="{{asset('css/plugins.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('css/theme.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/range.css')}}" rel="stylesheet" type="text/css">
 
     <link href="{{asset('css/custom.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('css/colors/blue.css')}}" id="color-scheme" rel="stylesheet" type="text/css">
@@ -29,19 +30,23 @@
 
 </head>
 
-<body>
+<body id="app">
 
             @include('includes.header')
             @yield('content')
             <footer>
                 @include('includes.footer')
             </footer>
-            <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
             <a id="back-to-top"><i class="icon ion-chevron-up"></i></a>
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=+213697883500" id="liveChat"></a>
+            <scrip src="{{asset('js/app.js')}}"></scrip>
             <!-- Scripts -->
             <script src="{{asset('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')}}"></script>
             <script src="{{asset('js/jquery.min.js')}}"></script>
             <script src="{{asset('js/plugins.js')}}"></script>
             <script src="{{asset('js/scripts.js')}}"></script>
+            <script src="{{asset('js/vue.js')}}"></script>
+            <script src="{{asset('js/range.js')}}"></script>
 </body>
 </html>

@@ -9,68 +9,47 @@
 @section('content')
 
 
-    <section class="hero-fullwidth  overlay" style="background-image: url({{asset('img/backgrounds/05.png')}});background-size: 100%;">
-        <div class="hero-container container">
+    <section class="hero-fullscreen hero-video overlay-2">
+
+        <video youtube-video-id="AGIqhnuU5YM" id="vossen-youtube"></video>
+
+        <div class="hero-container">
             <div class="hero-content text-center">
-                <div class="col-sm-12 mr-auto text-center">
-                    <h1 class="large white-until-load mt20 white"><span class="bold">A propos de nous</span></h1>
-                    <h5 class="subheading white-until-load mt20 mb30 hidden-xs white">Ruya studio Agence Creative</h5>
-                    <hr class="separator">
-                </div>
+                <a href="#features" class="scroll-btn "><i class="ion-chevron-down size-4x"></i></a>
             </div>
         </div>
+
     </section>
 
     @foreach($abouts as $about)
     <!-- About -->
-    <section class="bg-grey-1">
-        <div class="container pt60 pb60">
-            <div class="vertical-align">
-                <div class="col-md-6 text-left mt20 mb20">
-                    <h2>{{$about->title_1}}</h2>
-                    <p>{!! $about->description_1 !!}</p>
-                </div>
+    <section class="bg-white pb120 pt140" id="features">
+        <div class="container pb80">
 
-                <div class="col-md-6 mt20 mb20">
-                    <div class="video-container">
-                 <iframe src="http://player.vimeo.com/video/{{$about->link_video}}?title=0&amp;byline=0&amp;portrait=0&amp;color=fff" allowfullscreen></iframe>
-{{--                        <iframe src='{{$about->link_video}}' frameborder='0' allowfullscreen></iframe>--}}
-                    </div>
+            <div class="d-flex vertical-align justify-content-between">
+
+                <div class="col-md-7 text-left ">
+                    <h2 class="pl30 pr30   dark">{{$about->title_1}}</h2>
+                        <div class="pl30 pr30 box">
+                            <div class="lead-3">{!! $about->description_1 !!}</div>
+                        </div>
+                </div>
+                <div class="col-md-5">
+                    <img src="{{asset('img/app/team.gif')}}" alt="" class="" width="450">
                 </div>
 
             </div>
         </div>
     </section>
     <!-- End About -->
-
-
-      <!-- Skills -->
-      <section class="bg-white">
-          <div class="container pt60 pb60">
-              <div class="row-flex-center">
-                      <div class="row">
-                          <div class="col-lg-6">
-                                  <div class="slider-block-1 owl-carousel navigation-thin ">
-                                       @foreach((array)json_decode($about->images,true) as $image)
-                                      <img src="{{asset('storage/'.$image)}}" class="img-responsive mr-auto">
-                                      @endforeach
-                                  </div>
-                          </div>
-                          <div class="col-md-6 text-left  mt20 mb20">
-                              <h2>{{$about->title_2}}</h2>
-                              <p>{!! $about->description_2 !!}</p>
-                          </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-      <!-- End Skills -->
     @endforeach
 
 
 
+</section>
+
       <!--TEAM-->
-      <section class="bg-dark-1 white">
+     {{--- <section class="bg-dark-1 white">
           <div class="container pt50 pb50">
               <div class="row">
                   <div class="col-md-12 section-heading">
@@ -128,44 +107,80 @@
 
               </div>
           </div>
-      </section>
+      </section>--}}
       <!-- End Team -->
     <!-- How -->
-    <section class="pt100 pb100 bg-grey">
+    <section class="pt60 pb80 bg-img-11">
         <div class="container">
             <div class="col-md-12 section-heading ">
-                <h2>Ce que nous faisons</h2>
+                <h3 class="bold dark">Nos valeurs </h3>
                 <hr class="separator">
+                <p class="lead-3 dark">Ce qui nous rendre plus forts, Nous sommes dévoués à votre succès! </p>
+
             </div>
             <div class="row text-center">
-                    <div class="col-md-3 col-sm-4 feature-center">
-                        <i class="icon-genius size-6x"></i>
-                        <i class="icon-genius back-icon"></i>
-                        <h5>Digital Marketing</h5>
-                        <p>Lorem ipsum dolor sit amet, consctetuer adipising.</p>
+                    <div class="col-md-4 col-sm-4 feature-left">
+                        <i class="icon-target size-4x color"></i>
+                        <i class="icon-target back-icon"></i>
+                        <div class="feature-left-content">
+                        <h4 class="dark bold">Objectives</h4>
+                        <p>Notre équipe travaille dur et intelligemment pour présenter le meilleur du e-marketing et des technologies dans le monde,
+                            apporter à nos partenaires des solutions de développement pour leur activité.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 feature-center">
-                        <i class="icon-telescope size-6x"></i>
+                    <div class="col-md-4 col-sm-4 feature-left">
+                        <i class="icon-telescope size-4x color"></i>
                         <i class="icon-telescope back-icon"></i>
-                        <h5>UX Strategy</h5>
-                        <p>Lorem ipsum dolor sit amet, consctetuer adipising.</p>
+                        <div class="feature-left-content">
+                        <h4 class="dark bold">Vision</h4>
+                        <p>Our team works hard & smart to present the best of e-marketing and technologies in the world,
+                            to provide our partners with development solutions for their business,
+                            and to enrich technologies of Arab world, where Muzawed aims to reach leadership of MENA market.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 feature-center">
-                        <i class="icon-streetsign size-6x"></i>
+                    <div class="col-md-4 col-sm-4 feature-left">
+                        <i class="icon-streetsign size-4x color"></i>
                         <i class="icon-streetsign back-icon"></i>
-                        <h5>Story &amp; Content</h5>
-                        <p>Lorem ipsum dolor sit amet, consctetuer adipising.</p>
+                        <div class="feature-left-content">
+                        <h4 class="dark bold">Teamwork</h4>
+                        <p>Our team works hard & smart to present the best of e-marketing and technologies in the world,
+                            to provide our partners with development solutions for their business,
+                            and to enrich technologies of Arab world, where Muzawed aims to reach leadership of MENA market.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 feature-center">
-                        <i class="icon-genius size-6x"></i>
+                    <div class="col-md-4 col-sm-4 feature-left">
+                        <i class="icon-genius size-4x color"></i>
                         <i class="icon-genius back-icon"></i>
-                        <h5>Digital Marketing</h5>
-                        <p>Lorem ipsum dolor sit amet, consctetuer adipising.</p>
+                        <div class="feature-left-content">
+                        <h4 class="dark bold">Customers</h4>
+                        <p>Our team works hard & smart to present the best of e-marketing and technologies in the world,
+                            to provide our partners with development solutions for their business,
+                            and to enrich technologies of Arab world, where Muzawed aims to reach leadership of MENA market.</p>
+                        </div>
                     </div>
+                <div class="col-md-4 col-sm-4 feature-left">
+                    <i class="icon-genius size-4x color"></i>
+                    <i class="icon- back-icon"></i>
+                    <div class="feature-left-content">
+                        <h4 class="dark bold">Quality</h4>
+                        <p>Our team works hard & smart to present the best of e-marketing and technologies in the world,
+                            to provide our partners with development solutions for their business,
+                            and to enrich technologies of Arab world, where Muzawed aims to reach leadership of MENA market.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 feature-left">
+                    <i class="icon-genius size-4x color"></i>
+                    <i class="icon-genius back-icon"></i>
+                    <div class="feature-left-content">
+                        <h4 class="dark bold">Management</h4>
+                        <p>Our team works hard & smart to present the best of e-marketing and technologies in the world,
+                            to provide our partners with development solutions for their business,
+                            and to enrich technologies of Arab world, where Muzawed aims to reach leadership of MENA market.</p>
+                    </div>
+                </div>
                 </div>
 
             </div>
-        </div>
     </section>
     <!-- End How -->
 

@@ -83,7 +83,7 @@
         <!-- End Contact Form Section -->
 
         <!-- Google Map -->
-        <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=AADL,%20Ouled%20Yaich,%20Blida+(Ruya%20Studio)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+        <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=AADL,%20N29,%20Ouled%20Ya%C3%AFch,%20Blida,%20Algeria&t=&z=13&ie=UTF8&iwloc=&output=embed">
 
             </iframe></div>
         <!-- End Google Map -->

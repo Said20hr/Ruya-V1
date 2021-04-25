@@ -18,10 +18,10 @@
                     <li><a href="{{route('home')}}">Acceuil</a></li>
                     <li><a href="{{route('about')}}">A propos</a></li>
                     <li class="dropdown">
-                        <a href="{{route('service')}}">Services<i class="ti-angle-down"></i></a>
+                        <a href="{{route('service')}}" class="pointer">Services<i class="ti-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             @foreach($services as $service)
-                            <li><a href="{{route('service.category',$service->slug)}}">{{$service->name}}</a></li>
+                            <li><a href="{{route('service.category',$service->slug)}}" class="pointer">{{$service->name}}</a></li>
                             @endforeach
                         </ul>
                     </li>

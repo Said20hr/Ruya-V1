@@ -663,4 +663,40 @@
 		displayTypeSpeed: 100
 	});
 
-}(jQuery));
+
+        $("#pack").on( "change", function () {
+        //$("#ccp-compte").css("background-color","#56c1ab");
+        var selected = $(this).children("option:selected").val();
+        if(selected !=="Autre")
+    {
+
+        $("#budget").css("display", "none");
+        //$("#exampleRadios2").prop("checked", true);
+
+    } else {
+
+            $("#budget").toggle('fast');
+        // alert("wilaya - " + selected);
+    }
+
+    } );
+
+
+
+
+
+    /*$('input:radio[name="price"]').change(
+        function(){
+            if ($(this).is(':checked'))
+            {
+                var id = $(this).attr('data-id');
+                alert(id);
+            }
+
+
+        });*/
+
+
+
+
+    }(jQuery));
